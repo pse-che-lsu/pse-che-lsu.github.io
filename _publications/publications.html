@@ -1,0 +1,571 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PSE@LSU | Publications</title>
+  <meta name="description" content="Publications from the PSE@LSU research group." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/styles.css" />
+  <link rel="icon" type="image/png" href="../assets/images/logos/PSE/PSE-logo-10.png">
+  <style>
+    .publication-filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 0 0 28px;
+    }
+
+    .pub-filter {
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--lsu-purple);
+      border-radius: 999px;
+      padding: 10px 16px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .pub-filter:hover,
+    .pub-filter.active {
+      background: var(--lsu-purple);
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(70, 29, 124, 0.18);
+    }
+
+    .pub-search {
+      width: 100%;
+      margin: 0 0 18px;
+      padding: 14px 18px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      font: inherit;
+      color: var(--ink);
+      background: #fff;
+      box-shadow: 0 10px 30px rgba(40, 16, 79, 0.05);
+    }
+
+    .pub-year-heading {
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      margin: 40px 0 18px;
+      color: var(--deep-purple);
+    }
+
+    .pub-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 14px;
+    }
+
+    .pub-list li {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 18px 20px;
+      box-shadow: 0 12px 34px rgba(40, 16, 79, 0.06);
+      line-height: 1.55;
+      color: var(--muted);
+    }
+
+    .pub-list a {
+      color: var(--deep-purple);
+      font-weight: 650;
+      text-decoration: none;
+    }
+
+    .pub-list a:hover {
+      color: var(--lsu-purple);
+      text-decoration: underline;
+    }
+
+    .publication-group.hidden,
+    .pub-list li.hidden {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Primary navigation">
+      <!-- <a class="brand" href="../index.html#home" aria-label="PSE at LSU home">
+        <span class="brand-mark">PSE</span>
+        <span class="brand-text">PSE@LSU</span>
+      </a> -->
+      <a class="brand" href="#home" aria-label="PSE at LSU home">
+        <img src="../assets/images/logos/PSE/PSE-logo-9.png" alt="PSE@LSU logo" class="brand-logo">
+        <!-- <span class="brand-text">PSE@LSU</span> -->
+      </a>         
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <ul class="nav-links">
+        <li><a href="../index.html#home">Home</a></li>
+        <li><a href="../index.html#research">Research</a></li>
+        <li><a href="../index.html#people">People</a></li>
+        <li><a href="../index.html#products">Products</a></li>
+        <li><a href="../index.html#resources">Resources</a></li>
+        <li><a href="../index.html#publications">Publications</a></li>
+        <li><a href="../index.html#sponsors">Sponsors</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <a href="../index.html#publications" class="btn btn-secondary">← Back to Publications</a>
+
+        <div class="section-heading" style="margin-top: 28px;">
+          <p class="eyebrow">Research Output</p>
+          <h1>Publications</h1>
+          <p>Journal articles, conference papers, and scholarly work from the PSE@LSU research group.</p>
+        </div>
+
+        <input class="pub-search" type="search" placeholder="Search publications by title, author, journal, or year..." aria-label="Search publications">
+
+        <div class="publication-filters" aria-label="Filter publications by year range">
+          <button class="pub-filter active" data-year="all">All</button>
+          <button class="pub-filter" data-year="2024-2026">2024–2026</button>
+          <button class="pub-filter" data-year="2022-2023">2022–2023</button>
+          <button class="pub-filter" data-year="2021-2022">2021–2022</button>
+          <button class="pub-filter" data-year="2016-2020">2016–2020</button>
+          <button class="pub-filter" data-year="2011-2015">2011–2015</button>
+          <button class="pub-filter" data-year="2006-2010">2006–2010</button>
+          <button class="pub-filter" data-year="2000-2005">2000–2005</button>
+          <button class="pub-filter" data-year="1980-1999">1980–1999</button>
+        </div>
+
+        <div class="publication-list full-publication-list">
+          <section class="publication-group" data-year="2024-2026">
+            <h2 class="pub-year-heading">2024–2026</h2>
+            <ul class="pub-list">
+              <li><a href="https://chemrxiv.org/engage/chemrxiv/article-details/6674a85c5101a2ffa81a2b24" target="_blank" rel="noopener">“Synergizing Data-driven and Knowledge-based Hybrid Models for Ionic Separations,” T. Olayiwola, L. Briceno-Mena, C. Arges, J.A. Romagnoli, Accepted in ACS ES&amp;T Engineering, (2024)</a></li>
+              <li><a href="https://chemrxiv.org/engage/chemrxiv/article-details/66b11608c9c6a5c07a14d418" target="_blank" rel="noopener">“Graph-Based Modeling and Molecular Dynamics for Ion Activity Coefficient Prediction in Polymeric Ion-Exchange Membranes,” P. Naghshnejad, G.T. Marchan, T. Olayiwola, J.A. Romagnoli, R. Kumar, (2024)</a></li>
+              <li><a href="https://aiche.confex.com/aiche/2024/meetingapp.cgi/Paper/693628" target="_blank" rel="noopener">“Enhancing Electrochemical Deionization Optimization through Integrated Physics and Machine Learning Models,” T. Olayiwola, J.A. Romagnoli, 2024 AIChE Annual Meeting, (2024)</a></li>
+              <li><a href="https://aiche.confex.com/aiche/2024/meetingapp.cgi/Paper/688066" target="_blank" rel="noopener">“Time Delayed Cointegration Analysis for Non-Stationary Process Monitoring,” J. Rao, C. Ji, J. Wang, W. Sun, J.A. Romagnoli, 2024 AIChE Annual Meeting, (2024)</a></li>
+              <li><a href="https://pubs.acs.org/doi/full/10.1021/acs.iecr.4c01171" target="_blank" rel="noopener">“Empowering Capacitive Devices: Harnessing Transfer Learning for Enhanced Data-Driven Optimization,” T. Olayiwola, R. Kumar, J.A. Romagnoli, Industrial &amp; Engineering Chemistry Research 63 (27), 11971-11981 (2024)</a></li>
+              <li><a href="https://pubs.acs.org/doi/full/10.1021/acs.iecr.4c00423" target="_blank" rel="noopener">“High-Order Nonstationary Feature Extraction for Industrial Process Monitoring Based on Multicointegration Analysis,” J. Rao, C. Ji, J. Wang, W. Sun, J.A. Romagnoli, Industrial &amp; Engineering Chemistry Research, 63, 21, 9489–9503, (2024)</a></li>
+              <li><a href="https://pubs.acs.org/doi/full/10.1021/acs.iecr.4c00401" target="_blank" rel="noopener">“Surfactant-Specific AI-Driven Molecular Design: Integrating Generative Models, Predictive Modeling, and Reinforcement Learning for Tailored Surfactant Synthesis,” M. Nnadili, A.N. Okafor, T. Olayiwola, D. Akinpelu, R. Kumar, J.A. Romagnoli, Industrial &amp; Engineering Chemistry Research 63 (14), 6313-6324, (2024)</a></li>
+              <li><a href="https://www.sciencedirect.com/science/article/pii/S0098135424000097" target="_blank" rel="noopener">“Exploring Nontraditional LSTM Architectures for Modeling Demethanizer Column Operations,” M. Mandis, R. Baratti, J. Chebeir, S. Tronci, J.A. Romagnoli, Computers &amp; Chemical Engineering 183, 108591, (2024)</a></li>
+              <li><a href="https://www.sciencedirect.com/science/article/pii/S0098135424000097" target="_blank" rel="noopener">“A Practitioner’s Guide to Machine Learning Applications in Chemical Engineering,” L. Briceno-Mena, J.A. Romagnoli, Spring Meeting &amp; 20th Global Congress on Process Safety, (2024)</a></li>
+              <li><a href="https://aiche.confex.com/aiche/s24/meetingapp.cgi/Paper/679604" target="_blank" rel="noopener">“Integrating Physics and Machine Learning: A Hybrid Modeling Approach for Electrochemical Separation,” T. Olayiwola, R. Kumar, C. Arges, J.A. Romagnoli, Spring Meeting &amp; 20th Global Congress on Process Safety, (2024)</a></li>
+              <li><a href="https://aiche.confex.com/aiche/s24/meetingapp.cgi/Paper/679319" target="_blank" rel="noopener">“JMP-FASTMAN: All-in-One Tool for Data Exploration and Fault Detection Analysis,” K. Territo, J.A. Romagnoli, 2024 Spring Meeting &amp; 20th Global Congress on Process Safety, (2024)</a></li>
+              <li><a href="https://www.sciencedirect.com/science/article/abs/pii/S2352152X23033819" target="_blank" rel="noopener">“Data-based Health Indicator Extraction for Battery SOH Estimation via Deep Learning,” T. Tao, C. Ji, J. Dai, J. Rao, J. Wang, W. Sun, J.A. Romagnoli, Journal of Energy Storage 78, 109982, (2024)</a></li>
+              <li><a href="https://www.sciencedirect.com/science/article/abs/pii/B978044328824150507X" target="_blank" rel="noopener">“Combining Predictive Models and Reinforcement Learning for Tailored Molecule Generation,” M. Nnadili, A.N. Okafor, D. Akinpelu, T. Olayiwola, J.A. Romagnoli, Computer Aided Chemical Engineering 53, 3037-3042, (2024)</a></li>
+              <li><a href="https://www.sciencedirect.com/science/article/abs/pii/B9780443288241505718" target="_blank" rel="noopener">“FASTMAN-JMP: All-in-one Tool for Data Mining and Model Building,” K. Territo, J. Romagnoli, Computer Aided Chemical Engineering 53, 3421-3426, (2024)</a></li>
+              <li><a href="https://pubs.rsc.org/en/content/articlehtml/2024/an/d4an00619d" target="_blank" rel="noopener">“A Microfluidic Approach to Study Variations in Chlamydomonas Reinhardtii Alkaline Phosphatase Activity in Response to Phosphate Availability,” A. Rahnama, M. Vaithiyanathan, L. Briceno-Mena, T.M. Dugas, K.L. Yates, J.A. Romagnoli, A.T. Melvin, Analyst 149 (16), 4256-4266, (2024)</a></li>
+              <li>“Comparative Analysis of PharmHGT, GCN, and GAT Models for Predicting LogCMC in Surfactants”, G. C. Theis Marchan, T. Olayiwola, J. A. Romagnoli, Systems Control Transaction, Vol.4 399-405 (2025)</li>
+              <li>“VAE-Assisted Data Augmentation for Improved Molecular Prediction with Graph Neural Networks (GNNs) in Low-Data Regimes”, G. C. Theis Marchan, P. Naghshnejad, A. Okafor, J. A. Romagnoli, Chemical Engineering Transactions, Vol. 117 1021-1026 (2025)</li>
+              <li>“Towards Self-Tuning PID Controllers: A Data-Driven, Reinforcement Learning Approach for Industrial Automation”, K. Territo, P. Vallet, J.A. Romagnoli, Systems Control Transaction, Vol. 4 1843-1848 (2025)</li>
+              <li>“Physics-informed Data-driven control of Electrochemical Separation Processes”, T. Olayiwola, K. Territo, J.A. Romagnoli, Systems Control Transaction, Vol. 4 1908-1914 (2025)</li>
+              <li>Orthogonal long short-term memory autoencoder for semi-supervised soft sensor modeling, F. Ma, C. Ji, J. Wang, W. Sun, J. A Romagnoli, Chemometrics and Intelligent Laboratory Systems, Vol. 265, 105499 (2025)</li>
+              <li>AI in Chemical Engineering: Unlocking Power Within Data, JA Romagnoli, L Briceno-Mena, V Manee, CRC Press (2025)</li>
+              <li>Toward harnessing AI for surfactant chemistry: Prediction of critical micelle concentration. G.T. Marchan, T.O. Balogun, K. Territo, D. Das, T. Olayiwola, R. Kumar, J. A Romagnoli, Computational Materials Science, Vol. 265, pp.114548 (2026)</li>
+              <li>Graph-Based, Time-Warped Embedding for Time Series Analysis and Process Monitoring, K. Territo, J. A. Romagnoli, Industrial &amp; Engineering Chemistry Research, Vol 65/Issue 8 (2026)</li>
+              <li>Intelligent Temporal Synchronization Enhanced Cointegration Framework for Non-Stationary Industrial Process Monitoring, J. Rao, C. Ji, K. Territo, J. Wang, W. Sun, J. A Romagnoli, Process Safety and Environmental Protection, Vol. 208, 108410 (2026)</li>
+              <li><a href="https://doi.org/10.3390/membranes16010012" target="_blank" rel="noopener">Uncovering Structure–Conductivity Relationships in Anion Exchange Membranes (AEMs) Using Interpretable Machine Learning, P. Naghshnejad, D. Das, J. A. Romagnoli, R. Kumar, J. Chen, Membranes, 16(1), 12 (2026)</a></li>
+            </ul>
+          </section>
+          <section class="publication-group" data-year="2022-2023">
+            <h2 class="pub-year-heading">2022–2023</h2>
+            <ul class="pub-list">
+              <li><a href="https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/666868" target="_blank" rel="noopener">“High-Order Non-Stationary Information Extraction for Industrial Process Monitoring Using Multi-Cointegration,” J. Rao, C. Ji, J. Wang, W. Sun, J.A. Romagnoli, (2023)</a></li>
+              <li><a href="https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/663576" target="_blank" rel="noopener">“Automated Synthesis of Hybrid Models for Ionic Separations,” T. Olayiwola, L. Briceno-Mena, T. Kulkarni, C. Arges, R. Kumar, J.A. Romagnoli, 2023 AIChE Annual Meeting, (2023)</a></li>
+              <li><a href="https://www.sciencedirect.com/science/article/abs/pii/S0098135423000285" target="_blank" rel="noopener">“Machine Learning-Based Surrogate Models and Transfer Learning for Derivative Free Optimization of HT-PEM Fuel Cells”, LA Briceno-Mena, CG Arges, JA Romagnoli, Computers &amp; Chemical Engineering, Vol. 171, 108159 (2023)</a></li>
+              <li><a href="https://pubs.acs.org/doi/full/10.1021/acs.iecr.3c00636" target="_blank" rel="noopener">“Determining Ion Activity Coefficients in Ion-Exchange Membranes with Machine Learning and Molecular Dynamics Simulations”, Hishara K., Gallage D., T. Olayiwola, L. A. Briceno-Mena, C. Arges, R. Kumar, J. A. Romagnoli, Industrial &amp; Engineering Chemistry Research, 62 (24), 9533-9548 (2023)</a></li>
+              <li><a href="https://doi.org/10.1016/j.compchemeng.2023.108378" target="_blank" rel="noopener">“Unsupervised Learning: Local and Global Structure Preservation in Industrial Data”, E. E. Seghers, L. A. Briceno-Mena, J. A. Romagnoli, Computers &amp; Chemical Engineering, Volume 178, 108378 (2023)</a></li>
+              <li><a href="https://chemrxiv.org/engage/chemrxiv/article-details/6478ae70be16ad5c574a6c02" target="_blank" rel="noopener">“Deconvoluting charge-transfer, mass transfer, and ohmic resistances in phosphonic acid-sulfonic acid ionomer binders used in electrochemical hydrogen pumps”, K. Arunagiri, A. Jark-Wah Wong, L. A. Briceno-Mena, J. A. Romagnoli, M. J. Janik , C. G. Arges, ChemRxiv, DOI: 10.26434/chemrxiv-2023-l0k02 (2023)</a></li>
+              <li><a href="https://www.sciencedirect.com/science/article/abs/pii/B9780443152740502870" target="_blank" rel="noopener">“Data-Driven Process Monitoring for Knowledge Discovery: Local and Global Structures”, E.E. Seghers, J.A. Romagnoli, Computer Aided Chemical Engineering 52, 1809-1815 (2023)</a></li>
+              <li><a href="https://www.sciencedirect.com/science/article/abs/pii/B9780443152740502316" target="_blank" rel="noopener">“Feature Embedding of Molecular Dynamics-Based Descriptors for Modeling Electrochemical Separation Processes”, HKG Dona, T Olayiwola, LA Briceno-Mena, CG Arges, R Kumar, Computer Aided Chemical Engineering, 52, 1451-1456 (2023)</a></li>
+              <li><a href="https://www.sciencedirect.com/science/article/abs/pii/B9780443152740501207" target="_blank" rel="noopener">“A Demethanizer column Digital twin with non-conventional LSTM neural networks arrangement”, M Mandis, R Baratti, J Chebeir, S Tronci, JA Romagnoli, Computer Aided Chemical Engineering 52, 751-756 (2023)</a></li>
+            </ul>
+          </section>
+          <section class="publication-group" data-year="2021-2022">
+            <h2 class="pub-year-heading">2021–2022</h2>
+            <ul class="pub-list">
+              <li><a href="https://www.researchgate.net/profile/Luis-Briceno-Mena/publication/363150670_Optimization_of_multi-mode_classification_for_process_monitoring/links/6310fecbacd814437ff53eb0/Optimization-of-multi-mode-classification-for-process-monitoring.pdf" target="_blank" rel="noopener">&quot;Optimization of Multi-Modal Classification for Process Monitoring,&quot; J.A. Romagnoli, Z. Webb, L. Briceno-Mena, M. Nnadili, E. Seghers, Frontiers in Chemical Engineering 4, 78, (2022)</a></li>
+              <li><a href="https://www.sciencedirect.com/science/article/abs/pii/S1875510022003493" target="_blank" rel="noopener">“Performance assessment of control strategies with application to NGL separation units”, M Mandis, R Baratti, J Chebeir, S Tronci, J.A. Romagnoli, Journal of Natural Gas Science and Engineering 106, 104763 (2022)</a></li>
+              <li><a href="https://ui.adsabs.harvard.edu/abs/2022APS..MARY19009A/abstract" target="_blank" rel="noopener">“Bridging the length scales in ionic separations via data-driven science and machine learning”, Arges, C. ; Ramos-Garcés, M. ; Lei, Q. ; Jordan, M. ; Senadheera, D. ; Li, K. ; Kumar, R. ; Briceno-Mena, L. ; Romagnoli, J.A., Bulletin of the American Physical Society (2022)</a></li>
+              <li><a href="https://www.sciencedirect.com/science/article/pii/S2405896322009636" target="_blank" rel="noopener">“Effect of the demethanizer improved control strategy on the separation train for the NGL separation process”, M Mandis, JA Chebeir, J.A. Romagnoli, R Baratti, S Tronci, IFAC-PapersOnLine 55 (7), 889-894 (2022)</a></li>
+              <li><a href="https://www.sciencedirect.com/science/article/abs/pii/B9780323958790502575" target="_blank" rel="noopener">“Machine Learning-Based Surrogate Models and Transfer Learning for Derivative Free Optimization of HTPEM Fuel Cells”, LA Briceno-Mena, CG Arges, J.A. Romagnoli, Computer Aided Chemical Engineering 51, 1537-1542 (2022)</a></li>
+              <li><a href="https://www.cambridge.org/core/journals/data-centric-engineering/article/data-mining-and-knowledge-discovery-in-chemical-processes-effect-of-alternative-processing-techniques/6E58B1133A9390177130A292422F4786" target="_blank" rel="noopener">&quot;Data mining and knowledge discovery in chemical processes: Effect of alternative processing techniques&quot;, L.A. Briceno-Mena, M. Nnadili, M.G. Benton, J.A. Romagnoli, Data-Centric Engineering, , 3, E18. doi:10.1017/dce.2022.21 (2022)</a></li>
+              <li><a href="https://pubs.acs.org/doi/10.1021/acs.iecr.1c04565" target="_blank" rel="noopener">&quot;General Feature Extraction for Process Monitoring Using Transfer Learning Approaches&quot;, W. Zhu, J. Zhang, J. A. Romagnoli, Industrial Engineering Chemistry Research, https://doi.org/10.1021/acs.iecr.1c04565 (2022)</a></li>
+              <li><a href="https://pubs.acs.org/doi/10.1021/acsomega.1c06669" target="_blank" rel="noopener">&quot;Modular Framework for Simulation-Based Multi-Objective Optimization of a Cryogenic Air Separation Unit&quot;, S. D. Salas, D. De Cecchis, B. V. Piguave, J. A. Romagnoli, ACS Omega, 7, 14, 11696–11709 (2022)</a></li>
+              <li><a href="https://aiche.onlinelibrary.wiley.com/doi/full/10.1002/amp2.10113" target="_blank" rel="noopener">&quot;Benchmark study of reinforcement learning in controlling and optimizing batch processes&quot;, W. Zhu, I. Castillo, Z. Wang, R. Rendall, L. H. Chiang, P. Hayot, J. A. Romagnoli, J. Adv. Manuf. Process, 7, pp. 1322-1329, doi: 10.1021/acsenergylett.1c02853 (2022)</a></li>
+              <li><a href="https://pubs.acs.org/doi/10.1021/acs.iecr.1c04237" target="_blank" rel="noopener">&quot;Electrochemical Pumping for Challenging Hydrogen Separations&quot;, G. Venugopalan; D. Bhattacharya; E. Andrews; L. Briceno-Mena; J. Romagnoli; J. Flake; and C. G. Arges, ACS Energy Letters, 7, pp. 1322-1329, doi: 10.1021/acsenergylett.1c02853 (2022)</a></li>
+              <li><a href="https://pubs.acs.org/doi/10.1021/acs.iecr.1c04237" target="_blank" rel="noopener">&quot;PemNet: A Transfer Learning-Based Modeling Approach of High-Temperature Polymer Electrolyte Membrane Electrochemical Systems&quot;, L. A. Briceno-Mena; J. A. Romagnoli; C. G. Arges, Industrial &amp; Engineering Chemistry Research, 61, 9, pp. 3350-3357, doi: 10.1021/acs.iecr.1c04237 (2022)</a></li>
+              <li><a href="https://www.sciencedirect.com/science/article/pii/S0263876221005037?via%3Dihub" target="_blank" rel="noopener">&quot;Learning to navigate a crystallization model with Deep Reinforcement Learning&quot;, V. Manee; R. Baratti; J. A. Romagnoli, Chemical Engineering Research and Design, 178, pp. 111-123, doi: 10.1016/j.cherd.2021.12.005 (2022),</a></li>
+              <li><a href="https://ieeexplore.ieee.org/document/9482807" target="_blank" rel="noopener">&quot;Reinforcement Learning-Based Fed-Batch Optimization with Reaction Surrogate Model&quot;, Y. Ma; Z. Wang; I. Castillo; R. Rendall; R. Bindlish; B. Ashcraft; D. Bentley; M. G. Benton; J. A. Romagnoli, American Control Conference, pp. 2581-2586, doi: 10.23919/ACC50511.2021.9482807 (2021),</a></li>
+              <li><a href="https://www.sciencedirect.com/science/article/pii/S2405896321010685" target="_blank" rel="noopener">&quot;Many-Objective Simulation-Based Optimization of an Air Separation Unit&quot;, S. Salas, D. Cecchis, B. Piguave, J.A. Romagnoli, IFAC Papers On-Line, 54-3, 522–527 (2021),</a></li>
+              <li><a href="https://www.sciencedirect.com/science/article/abs/pii/B9780323885065503211#!" target="_blank" rel="noopener">&quot;Real-Time Chemical Process Monitoring with UMAP&quot;, Z. Webb, J.A. Romagnoli, Computer Aided Chemical Engineering, Volume 50, Pages 2077-2082, (2021),</a></li>
+              <li><a href="https://www.sciencedirect.com/science/article/abs/pii/B9780323885065500450?via%3Dihub" target="_blank" rel="noopener">&quot;A Machine Learning Approach for Device Design from Materials and Operation Data&quot;, L. A. Briceno-Mena, G. Venugopalan, C. C. Arges, J. A. Romagnoli, Computer Aided Chemical Engineering, Volume 501, Pages 279-285 (2021),</a></li>
+              <li><a href="https://doi.org/10.1016/j.compchemeng.2021.107363" target="_blank" rel="noopener">&quot;A Multi-Objective Evolutionary Optimization Framework for a Natural Gas Liquids Recovery Unit&quot;, S. D. Salas, L. Contreras-Salas, P. Rubio-Duenas, J. Chebeir, J. A. Romagnoli, Comp. and Chem. Eng., Vol. 151, (2021),</a></li>
+              <li><a href="https://www.aidic.it/icheap15/programma/238manee.pdf" target="_blank" rel="noopener">&quot;Machine Learning for Monitoring and Control of NGL Recovery Plants&quot;, M. Mandis , J. Chebeir, R. Baratti, J.A. Romagnoli, S. Tronci, Chemical Engineering Transactions, Vol. 86, 997-1002, (2021),</a></li>
+              <li><a href="https://www.aidic.it/icheap15/programma/238manee.pdf" target="_blank" rel="noopener">&quot;Optimal Strategies to Control Particle Size and Variance in Antisolvent Crystallization Operations Using Deep RL&quot;, V. Manee, R. Baratti, J.A. Romagnoli, Chemical Engineering Transactions, Vol. 86, pp. 943-948, (2021),</a></li>
+              <li><a href="https://doi.org/10.1016/j.chemolab.2021.104269" target="_blank" rel="noopener">&quot;Investigation of Transfer Learning for Image Classification and Impact on Training Sample Size&quot;, w. Zhu, B. Braun, L. Chiang, J.A. Romagnoli, Chemometrics and Intelligent Laboratory Systems, Vol. 211, 15, (2021),</a></li>
+            </ul>
+          </section>
+          <section class="publication-group" data-year="2016-2020">
+            <h2 class="pub-year-heading">2016–2020</h2>
+            <ul class="pub-list">
+              <li><a href="https://www.sciencedirect.com/science/article/pii/B9780128233771502160" target="_blank" rel="noopener">“Control Strategies for Natural Gas Liquids Recovery Plants”, S Tronci, J.A. Chebeir, M. Mandis, R. Baratti, J.A. Romagnoli, Computer Aided Chemical Engineering, 1291-1296, (2020),</a></li>
+              <li><a href="https://www.sciencedirect.com/science/article/pii/S2666389920302579" target="_blank" rel="noopener">“Machine learning for guiding high-temperature PEM fuel cells with greater power density”, L.A. Briceno-Mena, G. Venugopalan, J.A. Romagnoli,and C.G. Arges, Patterns, https://doi.org/10.1016/j.patter.2020.100187, (2020),</a></li>
+              <li><a href="https://www.sciencedirect.com/science/article/abs/pii/S0098135420300545" target="_blank" rel="noopener">“Machine-learning-based simulation and fed-batch control of cyanobacterial-phycocyanin production in Plectonema by artificial neural network and deep reinforcement learning”, Y. Ma, D.A. Noreña-Caro, A.J. Adams, T.B. Brentzel, J.A. Romagnoli, M.G. Benton. Computers &amp; Chemical Engineering, 107016, (2020),</a></li>
+              <li><a href="https://www.sciencedirect.com/science/article/abs/pii/S0098135420300636" target="_blank" rel="noopener">“Operation optimization of a cryogenic NGL recovery unit using deep learning based surrogate modeling”, W. Zhu, J. Chebeir, J.A. Romagnoli, Computers &amp; Chemical Engineering, 106815, (2020),</a></li>
+              <li><a href="https://www.sciencedirect.com/science/article/pii/B9780128233771502159" target="_blank" rel="noopener">“A Deep Learning Approach on Surrogate Model Optimization of a Cryogenic NGL Recovery Unit Operation”, W. Zhu, J. Chebeir, Z.T. Webb, J.A. Romagnoli, Computer Aided Chemical Engineering, 1285-1290, (2020),</a></li>
+              <li><a href="https://pubs.acs.org/doi/abs/10.1021/acs.iecr.9b02450" target="_blank" rel="noopener">“A Deep Learning Image-Based Sensor for Real-Time Crystal Size Distribution Characterization”, V. Manee, W. Zhu, J. A. Romagnoli, , Ind. Eng. Chem. Res., 58, 51 (2019)</a></li>
+              <li><a href="https://www.sciencedirect.com/science/article/pii/S1875510019302264" target="_blank" rel="noopener">“Operability Assessment on Alternative Natural Gas Liquids Recovery Schemes”, J. Chebeir, S.D. Salas, J.A. Romagnoli, Journal of Natural Gas Science and Engineering, 102974, (2019),</a></li>
+              <li><a href="https://www.cetjournal.it/index.php/cet/article/view/CET1974116" target="_blank" rel="noopener">“A Deep Learning Approach on Industrial Pyrolysis Reactor Monitoring”, W. Zhu, Y. Zhan, J. Romagnoli, Chemical Engineering Transactions 74, 691-696, (2019),</a></li>
+              <li><a href="https://www.cetjournal.it/index.php/cet/article/view/CET1974127" target="_blank" rel="noopener">“Simulation-based Optimization and Control of a Natural Gas Liquids Recovery Unit”, J. Chebeir, S. Salas, J. Romagnoli, Chemical Engineering Transactions 74, 757-762, (2019),</a></li>
+              <li><a href="https://www.cetjournal.it/index.php/cet/article/view/CET1974125" target="_blank" rel="noopener">“A Comparative Study of Different Deep Learning Approaches for the Prediction of Natural Gas Demand in the United States”, V. Manee, J. Chebeir, J. Romagnoli, Chemical Engineering Transactions 74, 745-750, (2019),</a></li>
+              <li><a href="https://pubs.acs.org/doi/abs/10.1021/acs.iecr.9b00975" target="_blank" rel="noopener">“A Deep Learning Approach for Process Data Visualization Using t-Distributed Stochastic Neighbor Embedding”, W. Zhu, Z.T. Webb, K. Mao, J.A. Romagnoli, Industrial &amp; Engineering Chemistry Research, (2019),</a></li>
+              <li><a href="https://www.mdpi.com/2227-9717/7/5/309" target="_blank" rel="noopener">“Data-Driven Estimation of Significant Kinetic Parameters Applied to the Synthesis of Polyolefins”, S.D. Salas, A.L.T. Brandão, J.B.P. Soares, J.A. Romagnoli, Processes 7 (5), 309, (2019),</a></li>
+              <li><a href="https://www.sciencedirect.com/science/article/pii/S1359431118377354" target="_blank" rel="noopener">“Joint dynamic data reconciliation/parameter estimation: application to an industrial pyrolysis reactor”, G. Fadda, J. Chebeir, S.D. Salas, J. Romagnoli, Applied Thermal Engineering, (2019),</a></li>
+              <li><a href="https://www.sciencedirect.com/science/article/pii/S0098135418311931" target="_blank" rel="noopener">“A geometric observer design for a semi-batch free-radical polymerization system”, S.D. Salas, J. Romagnoli, S. Tronci, R. Baratti, Computers &amp; Chemical Engineering, Vol. 126 (2019), pp 391-402</a></li>
+              <li><a href="https://www.sciencedirect.com/science/article/pii/S0959152418304876" target="_blank" rel="noopener">“Continuous control of a polymerization system with deep reinforcement learning”, Y. Ma, W. Zhu, M.G. Benton, J. Romagnoli, Journal of Process Control, Vol. 75 (2019), pp. 40-47</a></li>
+              <li><a href="https://onlinelibrary.wiley.com/doi/full/10.1002/aic.16452" target="_blank" rel="noopener">“Deep learning for pyrolysis reactor monitoring: From thermal imaging toward smart monitoring system”, W. Zhu, Y. Ma, M.G. Benton, J.A. Romagnoli, Y. Zhan, AIChE Journal, Vol. 65 (2) (2019), pp. 582-591.</a></li>
+              <li><a href="https://www.sciencedirect.com/science/article/pii/S1359431118334306" target="_blank" rel="noopener">“An environment for topology analysis and data reconciliation of the pre-heat train in an industrial refinery”, J. Chebeir, Z.T. Webb, J.A Romagnoli, Applied Thermal Engineering, Vol. 147 (2019), pp. 623-635.</a></li>
+              <li><a href="https://www.mdpi.com/2227-9717/7/1/26" target="_blank" rel="noopener">“Modeling/Simulation of the Dividing Wall Column by Using the Rigorous Model”, C. Zhai, Q. Liu, J.A. Romagnoli, W. Sun, Processes, Vol. 7 (1) (2019), pp. 26.</a></li>
+              <li><a href="https://www.sciencedirect.com/science/article/pii/S095915241730032X" target="_blank" rel="noopener">“Data Mining and Clustering in Chemical Process Databases for Monitoring and Knowledge Discovery”, M.C. Thomas, W. Zhu, J.A. Romagnoli, Journal of Process Control, Vol. 67 (2018), pp. 160-175</a></li>
+              <li><a href="https://www.sciencedirect.com/science/article/pii/S096706611830131X" target="_blank" rel="noopener">“Framework Design for Weight-Average Molecular Weight Control in Semi-Batch Polymerization”, S.D Salas, N. Ghadipasha, W. Zhu, T. McAfee, T. Zekoski, W.F. Reed, J.A. Romagnoli, Control Engineering Practice, Vol. 78 (2018), pp. 12-23</a></li>
+              <li><a href="https://www.sciencedirect.com/science/article/pii/S0009250918304032" target="_blank" rel="noopener">“A Model-Based Approach for Controlling Particle Size Distribution in Combined Cooling-Antisolvent Crystallization Processes”, N. Ghadipasha, J.A. Romagnoli, S. Tronci, R. Baratti, Chemical Engineering Science, Vol. 190 (2018), pp. 260-272</a></li>
+              <li><a href="https://pubs.acs.org/doi/abs/10.1021/acs.iecr.7b03771" target="_blank" rel="noopener">&quot;Adaptive k-Nearest-Neighbor Method for Process Monitoring”, W. Zhu, W. Sun, J.A. Romagnoli, Industrial &amp; Engineering Chemistry Research, Vol. 57 (2018), pp. 257-2586</a></li>
+              <li><a href="https://www.sciencedirect.com/science/article/pii/S2405896318319396" target="_blank" rel="noopener">“Generic Process Visualization Using Parametric t-SNE”, W. Zhu, Z. Webb, X. Han, K. Mao, W. Sun, J.A. Romagnoli, IFAC-PapersOnLine, Vol. 51 (2018), pp. 803-808</a></li>
+              <li><a href="https://www.sciencedirect.com/science/article/pii/S2405896318320640" target="_blank" rel="noopener">“PCA-SDG Based Process Monitoring and Fault Diagnosis: Application to an Industrial Pyrolysis Furnace”, X. Han, S. Tian, J.A. Romagnoli, H. Li, W. Sun, IFAC-PapersOnLine, Vol. 51 (2018), pp. 482-487</a></li>
+              <li><a href="https://www.sciencedirect.com/science/article/pii/B9780444642417503694" target="_blank" rel="noopener">“Deep Learning Based Soft Sensor and Its Application on a Pyrolysis Reactor for Compositions Predictions of Gas Phase Components”, W. Zhu, Y. Ma, Y. Zhou, M. Benton, J.A. Romagnoli, Computer Aided Chemical Engineering, Vol. 44 (2018), pp. 2245-2250</a></li>
+              <li><a href="https://www.sciencedirect.com/science/article/pii/B9780444642417501555" target="_blank" rel="noopener">“Comprehensive Investment Framework for Optimal Exploitation of Liquid-Rich Unconventional Reservoirs and Natural Gas Distribution”, J. Chebeir, H. Asala, V. Manee, I. Gupta, J.A. Romagnoli, Computer Aided Chemical Engineering, Vol. 44 (2018), pp. 961-966</a></li>
+              <li><a href="https://www.sciencedirect.com/science/article/pii/B9780444642356502102" target="_blank" rel="noopener">“Real-Time Nonlinear State Estimation in Polymerization Reactors for Smart Manufacturing”, S.D. Salas, J. Chebeir, S. Tronci, R. Baratti, J.A. Romagnoli, Computer Aided Chemical Engineering, Vol 43 (2018), pp. 1207-12012</a></li>
+              <li><a href="http://www.prise-know.science/aidic/index.php/cet/article/view/CET1761082" target="_blank" rel="noopener">“Coking Analysis Based on the Prediction of Coil Surface Temperature in Radiation Section of Ethylene Cracking Furnace”, S. Tian, X. Han, J.A. Romagnoli, L. Ma, W. Sun, Chemical Engineering Transactions, Vol. 61 (2017)</a></li>
+              <li><a href="http://www.prise-know.science/aidic/index.php/cet/article/view/CET1761084" target="_blank" rel="noopener">“The Real-time Multiple Operational Condition Monitoring of Ethylene Cracking Furnace Based on the Principal Component Analysis”, X. Han, S. Tian, J.A. Romagnoli, Y. Zhan, W. Sun, Chemical Engineering Transactions, Vol. 61 (2017)</a></li>
+              <li><a href="https://www.onepetro.org/conference-paper/SPE-187361-MS" target="_blank" rel="noopener">“A Machine Learning Approach to Optimize Shale Gas Supply Chain Networks”, H.I. Asala, J. Chebeir, W. Zhu, I. Gupta, A. Dahi, J.A. Romagnoli, SPE Annual Technical Conference and Exhibition, October 10 (2017)</a></li>
+              <li><a href="https://www.sciencedirect.com/science/article/pii/B9780444639653502464" target="_blank" rel="noopener">“Online DEKF for State Estimation in Semi-Batch Free-Radical Polymerization Reactors”, S.D. Salas, N. Ghadipasha, W. Zhu, J.A. Romagnoli, T. Mcafee, W.F. Reed, Computer Aided Chemical Engineering, Vol 40 (2017), pp. 1465-1470</a></li>
+              <li><a href="https://www.sciencedirect.com/science/article/pii/B9780444639653502415" target="_blank" rel="noopener">“The Application of Reservoir Simulation to the Optimization of Shale Gas Supply Chain Design and its Water Management Structure”, J. Chebeir, H. Asala, A. Dahi, J.A. Romagnoli, Computer Aided Chemical Engineering, Vol. 40 (2017), pp. 1435-1440</a></li>
+              <li><a href="http://pubs.acs.org/doi/abs/10.1021/acs.iecr.7b01074" target="_blank" rel="noopener">“Online Optimal Feedback Control of Polymerization Reactors: Application to polymerization of acrylamide-water-potassium persulfate (KPS) system”, N. Ghadipasha, W. Zhu, J.A. Romagnoli, T. McAfee, T. Zekoski, W.F. Reed, Industrial &amp; Engineering Chemistry Research, DOI: 10.1021/acs.iecr.7b01074, Publication Date (Web): June 1 (2017)</a></li>
+              <li><a href="http://www.aidic.it/cet/17/57/185.pdf" target="_blank" rel="noopener">“A Model-based Robust Control approach for On-line Optimal feedback Control of Polymerization Reactors: Application to Polymerization of Acrylamide-water-Persulfate (KPS) Systems”, N. Ghadipasha, A. Geraili, H. Hernandez, J.A. Romagnoli, Chemical Engineering Transactions, Vol. 57 (2017)</a></li>
+              <li><a href="http://www.aidic.it/icheap13/program/138asala.pdf" target="_blank" rel="noopener">&quot;The Application of Compositional Modelling to the Integration of Realistic Re-Stimulation Strategies and Unconventional Shale Gas Supply Chain Optimization”, H. Asala, J. Chebeir, A. Dahi, J.A. Romagnoli, Chemical Engineering Transactions, Vol. 57 (2017)</a></li>
+              <li><a href="http://www.mdpi.com:8080/1996-1073/10/2/246" target="_blank" rel="noopener">“Development of Shale Gas Supply Chain Network under Market Uncertainties”, J. Chebeir, A. Geraili, J.A. Romagnoli, Energies, Vol. 10, Issue 2, pp. 246 (2017)</a></li>
+              <li><a href="http://pubs.acs.org/doi/abs/10.1021/acs.iecr.6b04395" target="_blank" rel="noopener">“Optimization of Renewable Energy Businesses under Operational Level Uncertainties through Extensive Sensitivity Analysis and Stochastic Global Optimization”, S.D. Salas, A. Geraili, J.A. Romagnoli, Industrial &amp; Engineering Chemistry Research, Vol. 56 (12) (2017), pp. 3360-3372</a></li>
+              <li><a href="https://www.researchgate.net/publication/304458482_Development_of_Shale_Gas_Supply_Chain_Network_under_Market_Uncertainties" target="_blank" rel="noopener">“Development of Shale Gas Supply Chain Network under Market Uncertainties”, J. Chebeir, A. Geraili, J.A. Romagnoli, Computer Aided Chemical Engineering, Vol. 38, pp. 901-906 (2016)</a></li>
+              <li><a href="https://www.sciencedirect.com/science/article/pii/B978044463428350148X" target="_blank" rel="noopener">“Extracting knowledge from historical databases for process monitoring using feature extraction and data clustering”, M.C. Thomas, J.A. Romagnoli, Computer Aided Chemical Engineering, Vol. 38 (2016), pp. 859-864</a></li>
+              <li><a href="https://www.researchgate.net/publication/304458404_Extracting_knowledge_from_historical_databases_for_process_monitoring_using_feature_extraction_and_data_clustering" target="_blank" rel="noopener">“First Steps towards Online Optimal Control of Molecular Weight in Batch and Semi-batch Free Radical Polymerization Reactors”, N. Ghadipasha, N. Soleimani, C.A. Castor, W.F. Reed, M.F. Drenski, J.A. Romagnoli, Computer Aided Chemical Engineering, Vol. 38 (2016), pp. 1129-1134</a></li>
+              <li><a href="http://onlinelibrary.wiley.com/doi/10.1002/aic.15372/abstract" target="_blank" rel="noopener">“A Generalized Stochastic Modelling Approach for Crystal Size Distribution In Antisolvent Crystallization Operations”, R. Baratti, S. Tronci, J.A. Romagnoli, AIChE Journal, Vol. 63 (2016), pp. 551-559</a></li>
+              <li><a href="http://pubs.acs.org/doi/abs/10.1021/acs.iecr.5b04003" target="_blank" rel="noopener">“A Decision Support Tool for Optimal Design of Integrated Biorefineries under Strategic and Operational Level Uncertainties”, A. Geraili, S.D. Salas, J.A. Romagnoli, Industrial &amp; Engineering Chemistry Research, 55 (2016), pp. 1667–1676</a></li>
+              <li><a href="http://www.mdpi.com/2227-9717/4/1/5" target="_blank" rel="noopener">“Combining on-line characterization tools with modern software environments for optimal operation of polymerization processes”, N. Ghadipasha, A. Geraili, J.A. Romagnoli, C.A. Castor, M.F. Drenski, W.F. Reed, Processes, Vol. 4, No. 1 (2016)</a></li>
+            </ul>
+          </section>
+          <section class="publication-group" data-year="2011-2015">
+            <h2 class="pub-year-heading">2011–2015</h2>
+            <ul class="pub-list">
+              <li><a href="http://www.aidic.it/cet/15/43/227.pdf" target="_blank" rel="noopener">“A Framework for Optimal Design of Integrated Biorefineries under Uncertainty”, A Geraili, JA Romagnoli, Chemical Engineering Transactions, Vol. 43 (2015)</a></li>
+              <li><a href="http://www.aidic.it/cet/15/43/230.pdf" target="_blank" rel="noopener">“A Deterministic Formulation and On-line Monitoring technique for the Measurement of Salt Concentration in Non-Isothermal Antisolvent Crystallization Processes”, N Ghadipasha, R Baratti, S Tronci, JA Romagnoli, Chemical Engineering Transactions, Vol. 43 (2015)</a></li>
+              <li><a href="http://onlinelibrary.wiley.com/doi/10.1002/aic.14815/abstract" target="_blank" rel="noopener">“On-Line Optimal Control of Crystal Properties in Non-Isothermal Antisolvent Crystallization”, N Ghadipasha, JA Romagnoli, S Tronci, R Baratti, AIChE Journal, Vol. 51 (7) (2015)</a></li>
+              <li><a href="http://onlinelibrary.wiley.com/doi/10.1002/aic.14849/full" target="_blank" rel="noopener">“A multiobjective optimization framework for design of integrated biorefineries under uncertainty”, A. Geraili, J.A. Romagnoli, AIChE Journal, Volume 61, Issue 10 (2015), pp. 3208–3222</a></li>
+              <li><a href="http://www.sciencedirect.com/science/article/pii/S0098135415000435" target="_blank" rel="noopener">“Topological Preservation Techniques For Nonlinear Process Monitoring”, G Robertson, M Thomas, JA Romagnoli, Computers &amp; Chemical Engineering, Vol. 76 (2015)</a></li>
+              <li><a href="https://ac.els-cdn.com/S0098135413003037/1-s2.0-S0098135413003037-main.pdf?_tid=ee525040-a88d-11e7-939f-00000aacb360&amp;acdnat=1507071500_1dd6d71655e17ec89cf289e92d4caec8" target="_blank" rel="noopener">“An active specification switching strategy that aids in solving nonlinear sets and improves a VNS/TA hybrid optimization methodology”. G Robertson, A Geraili, M Kelley, JA Romagnoli, Computers &amp; Chemical Engineering, Vol. 60 (2014), pp. 364-375</a></li>
+              <li><a href="https://ac.els-cdn.com/S009813541300327X/1-s2.0-S009813541300327X-main.pdf?_tid=d8a4f810-a88d-11e7-bfa0-00000aab0f26&amp;acdnat=1507071463_679d2cf6db69c2412b97070a0ea3329e" target="_blank" rel="noopener">“A modelling framework for design of nonlinear renewable energy systems through integrated simulation modelling and metaheuristic optimization: Applications to biorefineries”, A Geraili, P Sharma, JA Romagnoli, Computers &amp; Chemical Engineering, Vol. 61 (2014), pp. 102–117</a></li>
+              <li><a href="https://ac.els-cdn.com/S0098135414000039/1-s2.0-S0098135414000039-main.pdf?_tid=bd5ac8b4-a88d-11e7-aa31-00000aacb361&amp;acdnat=1507071418_14165f80888971990e0b5c6a025aecfe" target="_blank" rel="noopener">“A qualitative comparison between population balances and stochastic models for non-isothermal antisolvent crystallization processes”, G Cogoni, D Widenski, M Grosso, R Baratti, JA Romagnoli, Computers &amp; Chemical Engineering, Vol. 63 (2014), pp. 82–90</a></li>
+              <li><a href="http://pubs.acs.org/doi/abs/10.1021/ie4019098" target="_blank" rel="noopener">“Image-based multiresolution-ANN approach for on-line particle size characterization”, B Zhang, R Willis, JA Romagnoli, C Fois, S Tronci, R Baratti, Industrial &amp; Engineering Chemistry Research, 53(17) (2014), pp. 7008-70018</a></li>
+              <li><a href="http://www.sciencedirect.com/science/article/pii/S0360544214006951" target="_blank" rel="noopener">“Technology Analysis of Integrated Biorefineries through Process Simulation and Hybrid Optimization”, A Geraili, JA Romagnoli, Energy, Vol. 73 (2014), pp. 145–159</a></li>
+              <li><a href="http://pubs.acs.org/doi/abs/10.1021/ie404003j" target="_blank" rel="noopener">“Controllability of Semi-Batch Nonisothermal Antisolvent Crystallization Processes”, G Cogoni, S Tronci, R Baratti, JA Romagnoli, Industrial &amp; Engineering Chemistry Research, 53(17) (2014), pp. 7056–7065</a></li>
+              <li><a href="http://www.sciencedirect.com/science/article/pii/S0169743912002304" target="_blank" rel="noopener">“Automatic image-based estimation of texture analysis as a monitoring tool for crystal growth”, Zhang B., Abbas A., Romagnoli J.A., Chemometrics and Intelligent Laboratory Systems, 121, 42–51 (2013)</a></li>
+              <li><a href="http://www.aidic.it/cet/13/32/368.pdf" target="_blank" rel="noopener">“Image-based multiresolution ANN sensor for PSD in crystallization operations”, B. Zhang, R. Willis, C. Fois, S. Tronci, R. Baratti, J.A. Romagnoli, Chemical Engineering Transactions, Volume 32 (2013)</a></li>
+              <li><a href="http://www.sciencedirect.com/science/article/pii/S0098135412003109" target="_blank" rel="noopener">“Strategic Value Optimization and Analysis of Multi-product Biomass Refineries with Multiple Stakeholder Considerations”, Sharma P., Romagnoli J.A., Computers and Chemical Engineering, Vol. 50, 5, pp. 105–129 (2013)</a></li>
+              <li><a href="http://www.sciencedirect.com/science/article/pii/S009813541300224X" target="_blank" rel="noopener">“Options analysis for long-term capacity design and operation of a lignocellulosic biomass refinery”, P. Sharma, J.A. Romagnoli, Computers and Chemical Engineering, Vol. 58, pp. 178–202 (2013)</a></li>
+              <li>“A Simulation and Techno-economic Optimization-based Methodology to Design Multi-product Lignocellulosic Biorefineries”, A. Geraili, P. Sharma, J.A.Romagnoli, Chemical Engineering Transactions, Volume 32, pp.1183-188 (2013)</li>
+              <li><a href="http://onlinelibrary.wiley.com/doi/10.1002/aic.14089/full" target="_blank" rel="noopener">“Stochastic Approach for the Prediction of PSD in Nonisothermal Antisolvent Crystallization Processes&quot;, G. Cogoni, S. Tronci, R. Baratti, J. A. Romagnoli, AIChE Journal, Vol.59, No. 8,pp. 2843-2851 (2013)</a></li>
+              <li><a href="https://www.researchgate.net/profile/Giuseppe_Cogoni/publication/237051036_Stochastic_Global_Model_for_the_Prediction_of_the_Asymptotic_CSDs_Using_Antisolvent_Crystallization_Processes/links/00463532eeb52219cb000000.pdf" target="_blank" rel="noopener">“Stochastic Global Model for the Prediction of the Asymptotic CSDs Using Antisolvent Crystallization Processes”, G. Cogoni, S. Tronci, G. Mistretta, R. Baratti, J.A. Romagnoli, Chemical Engineering Transactions, Volume 32, pp. 2107-2112 (2013)</a></li>
+              <li><a href="http://pubs.acs.org/doi/abs/10.1021/ie4019098" target="_blank" rel="noopener">“Image-based Multi-resolution-ann Approach for On-line Particle Size Characterization”, Zhang B., Willis R., Romagnoli J., Fois C.A.M., Tronci S., Baratti R., Chemical Engineering Transactions, Volume 32, pp 2203-2208 (2013)</a></li>
+              <li><a href="http://pubs.acs.org/doi/abs/10.1021/ie303414b" target="_blank" rel="noopener">“On the Influence of Hydrogen Bond Interactions in Isothermal and Nonisothermal Antisolvent Crystallization Processes”, G. Cogoni, R. Baratti, J.A. Romagnoli, Industrial &amp; Engineering Chemistry Research, 52 (28), pp. 9612– 9619 (2013)</a></li>
+              <li><a href="http://pubs.acs.org/doi/abs/10.1021/ie202854b" target="_blank" rel="noopener">&quot;Data-derived analysis and inference for an industrial deethanizer&quot;, Corona, F.; Mulas M.; Baratti R.; Romagnoli J.A., Industrial &amp; Engineering Chemistry Research, 51 (42), pp. 13732–13742 (2012)</a></li>
+              <li><a href="http://onlinelibrary.wiley.com/doi/10.1002/crat.201100441/abstract" target="_blank" rel="noopener">“A modelling approach for the non-isothermal antisolvent crystallization of a solute with weak temperature dependent solubility”, Widenski D.J., Abbas A., Romagnoli J.A., Crystal Research and Technology, Vol. 47, No. 5, pp. 491-504 (2012)</a></li>
+              <li><a href="http://onlinelibrary.wiley.com/doi/10.1002/aic.13760/abstract" target="_blank" rel="noopener">“Time Evolution of the PSD in Crystallization Operations: An Analytical Solution based on Ornstein-Uhlenbeck Process”, Cogoni G., Grosso M., Baratti R., Romagnoli J.A., AIChE Journal, Vol. 58 (12), pp. 3731–3739 (2012)</a></li>
+              <li><a href="http://pubs.acs.org/doi/abs/10.1021/ie1010299" target="_blank" rel="noopener">“A stochastic approach for the prediction of PSD in crystallization processes: analytical solution for the asymptotic behaviour and parameter estimation”, S. Tronci, M. Grosso, R. Baratti, J. A. Romagnoli, Computers and Chemical Engineering, 35, pp. 2318– 2325 (2011)</a></li>
+              <li><a href="http://www.sciencedirect.com/science/article/pii/S0098135410003406" target="_blank" rel="noopener">“A Model-Based Nucleation Study of the Combined Effect of Seed Properties and Cooling Rate in Cooling Crystallization”, Widenski D., Abbas A., Romagnoli, Computers and Chemical Engineering, 35:12, 2696-2705 (2011)</a></li>
+              <li><a href="http://pubs.acs.org/doi/abs/10.1021/ie1021442" target="_blank" rel="noopener">“Framework for Integrated Model-Centric Process Support”, D. Aragon, P. A. Rolandi, J. A. Romagnoli, Industrial &amp; Engineering Chemistry Research, 50 (18), pp 10533–10548 (2011)</a></li>
+              <li><a href="http://pubs.acs.org/doi/abs/10.1021/ie102393y" target="_blank" rel="noopener">&quot;Use of Predictive solubility models for isothermal antisolvent crystallization modelling and optimization”, D. Widenski, A. Abbas, J.A. Romagnoli, Industrial &amp; Engineering Chemistry Research, 50 (13), 8304–8313 (2011)</a></li>
+              <li><a href="http://www.sciencedirect.com/science/article/pii/S0098135411001827" target="_blank" rel="noopener">“A Decision Support Tool for Strategic Analysis of Sustainable Biorefineries”, P Sharma, B. Sarker, J.A. Romagnoli, Computers and Chemical Engineering, 35, 1767– 1781 (2011)</a></li>
+              <li><a href="http://www.sciencedirect.com/science/article/pii/S0169743911000517" target="_blank" rel="noopener">“Multi-Resolution Fuzzy Clustering Approach for Image-Based Particle Characterization for Particle Systems”, B. Zhang, A. Abbas, J.A. Romagnoli, Chemometrics and Intelligent Laboratory Systems, 107, 155–164 (2011)</a></li>
+              <li><a href="http://www.sciencedirect.com/science/article/pii/S0098135411000408" target="_blank" rel="noopener">“A Multi-Level Simulation Approach for the Crude Oil Loading/Unloading Scheduling Problem”, G. Robertson, A. Palazoglu, J.A. Romagnoli, Computers &amp; Chemical Engineering, 35, 817–827 (2011)</a></li>
+              <li><a href="http://pubs.acs.org/doi/abs/10.1021/ie1010299" target="_blank" rel="noopener">“Stochastic Approach for the Prediction of PSD in Crystallization Processes: Formulation and Comparative Assessment of Different Stochastic Models”, M. Grosso, G. Cogoni, R. Baratti, J. A. Romagnoli, Industrial &amp; Engineering Chemistry Research, Vol. 50, pp. 2133–2143 (2011)</a></li>
+              <li><a href="http://pubs.acs.org/doi/abs/10.1021/ie101153y" target="_blank" rel="noopener">“Characterization of Surface Coats of Bacterial Spores with Atomic Force Microscopy and Wavelets”, W. Sun, A. Palazoglu, J.A. Romagnoli, P. Stroeve, Industrial &amp; Engineering Chemistry Research, Vol. 50, pp. 2876–2882 (2011)</a></li>
+            </ul>
+          </section>
+          <section class="publication-group" data-year="2006-2010">
+            <h2 class="pub-year-heading">2006–2010</h2>
+            <ul class="pub-list">
+              <li><a href="http://www.sciencedirect.com/science/article/pii/S0098135410002504" target="_blank" rel="noopener">“On the topological modelling and analysis of industrial process data using the SOM”, F. Corona, M. Mulas, R. Baratti, J.A. Romagnoli, Computers &amp; Chemical Engineering, Vol. 34, Issue 1, pp. 2022 – 2032 (2010)</a></li>
+              <li><a href="http://www.sciencedirect.com/science/article/pii/S157079460970269X" target="_blank" rel="noopener">“A Novel Approach for the Prediction of PSD in Antisolvent Mediated Crystallization Processes”, M. Grosso, O. Galan, R. Baratti, J. A. Romagnoli, Brazilian Journal of Chemical Engineering, Vol. 27, No. 03, pp. 391 - 399 (2010)</a></li>
+              <li><a href="http://pubs.acs.org/doi/abs/10.1021/ie901885x" target="_blank" rel="noopener">“Dynamic Simulation and Optimization of a Urea Granulation Circuit”, I. M. Cotabarren, D. Bertín, J. A. Romagnoli, V. Bucalá, J. Piña, Industrial and Engineering Chemistry Research, ISSN 0888-5885, Vol. 49 (14), 6630-6640 (2010)</a></li>
+              <li><a href="http://www.sciencedirect.com/science/article/pii/S0255270110002448" target="_blank" rel="noopener">“Comparison of different solubility equations for modeling in cooling Crystallization”, D.J. Widenski, A. Abbas, J.A. Romagnoli, Chemical Engineering and Processing: Process Intensification, Vol. 49, pp. 1284–1297 (2010)</a></li>
+              <li><a href="http://www.sciencedirect.com/science/article/pii/S0098135410000220" target="_blank" rel="noopener">“Refinery Scheduling of Crude Oil Unloading, Storage and Processing using a Model Predictive Control Strategy”, U. Yüzgeç, A. Palazoglu, J. A. Romagnoli, Computers and Chemical Engineering, Volume 34, Issue 10, pp. 1671-1686 (2010)</a></li>
+              <li><a href="http://pubs.acs.org/doi/abs/10.1021/ie900568g" target="_blank" rel="noopener">“Modelling and Multiresolution Characterization for Microfabrication Applications”, R. Mukherjee, F. R. Hung, A. Palazoglu, J. A. Romagnoli, Industrial &amp; Engineering Chemistry Research, Vol. 49 (2), pp 548–558 (2010)</a></li>
+              <li><a href="http://onlinelibrary.wiley.com/doi/10.1002/aic.12130/abstract" target="_blank" rel="noopener">“A Stochastic Formulation for the Description of the Crystal Size Distribution in Anti-solvent Crystallization Processes”, M. Grosso, O. Galan, R. Baratti, J. A. Romagnoli, AIChE Journal, Vol. 56, No. 8, pp 20077-2087 2010)</a></li>
+              <li><a href="http://onlinelibrary.wiley.com/doi/10.1002/apj.437/abstract" target="_blank" rel="noopener">“Effects of operating conditions on particle size in sonocrystallization”, H. Oubani, A. Abbas, M. Srour, J. A. Romagnoli, Asia-Pac. Journal of Chem. Eng., DOI: 10.1002/apj.437 (2010)</a></li>
+              <li><a href="https://www.degruyter.com/view/j/cppm.2010.5.1/cppm.2010.5.1.1440/cppm.2010.5.1.1440.xml" target="_blank" rel="noopener">“A Fault Detection and Diagnosis Strategy for Batch/Semi Batch Processes”, H. Maulud, J.A. Romagnoli, Chemical Product and Process Modelling, Vol. 5, Iss. 1, Article 14 (2010)</a></li>
+              <li><a href="http://www.sciencedirect.com/science/article/pii/S0009250909008240" target="_blank" rel="noopener">“Stochastic Approach for the Calculation of Anti-Solvent Addition Policies in Crystallization Operations: An Application to a Bench-Scale Semi-Batch Crystallizer”, O. Galan, M. Grosso, R. Baratti, J.A. Romagnoli, Chemical Engineering Science, Vol. 65, 1797–1810 (2010)</a></li>
+              <li><a href="http://www.sciencedirect.com/science/article/pii/S0098135409002130" target="_blank" rel="noopener">“Integrated model-centric framework for support of manufacturing operations. Part I: The framework”, Rolandi P.A., Romagnoli J.A., Computers and Chemical Engineering, Vol. 34, pp. 17–35 (2010)</a></li>
+              <li>“A Multiresolution Spatial Correlation Approach for Line-Edge Roughness Characterization”, R. Mukherjee, J.C. Flake, A. Palazoglu, J.A. Romagnoli, Journal of Wavelet Theory and Applications, Volume 3, Number 1, pp. 103-122 (2009)</li>
+              <li>“Selective Oxidation of Ethylene in an Industrial Packed-Bed Reactor: Modeling, Analysis and Optimization”, O. Galan, V. G. Gomes, J.A. Romagnoli, K. F. Ngian, International Journal of Chemical Reactor Engineering, Vol. 7, Article A32 (2009)</li>
+              <li>“Modelling and Optimisation of an Industrial Ethylene Oxide Reactor”, S. Aryana, M. Ahmadi, V. Gomes, J.A. Romagnoli, K. Ngian, Chemical Product and ProcessModelling,Vol.4, Issue 1, Article 14 (2009)</li>
+              <li>“Sequencing diurnal air flow patterns for ozone exceedance days around Houston, Texas, S. Pakalapati, S. Beaver, J. A. Romagnoli, A. Palazoglu, Atmospheric Environment, Vol.43, Issue 3, pp. 715-723 (2009)</li>
+              <li>“Semiconductor LER, surface roughness and shape automatic monitoring through multi-resolution multivariate image analysis”, P. Facco, R. Mukherjee, F. Bezzo, M. Barolo, J. A. Romagnoli, AIChE Journal, Vol. 55, No. 5, pp. 1147-1160 (2009)</li>
+              <li>“Process Systems Engineering Education: Learning by Research”, A. Abbas, H.Y. Alhammadi, J.A. Romagnoli, Chemical Engineering Education, Vol. 43, No. 1 (2009)</li>
+              <li>“A Multi-Resolution Approach for Line Edge Roughness Detection”, R. Mukherjee, W. Sun, P. Stroeve, A. Palazoglu, J. A. Romagnoli, Microelectronic Engineering, 86(3), pp.340-351 (2009)</li>
+              <li>“Line Edge Detection and Characterization in SEM Images using Wavelets”, W. Sun, J. A. Romagnoli, J. W. Tringe, S. E. Létant, P. Stroeve, A. Palazoglu, IEEE Transactions on Semiconductor Manufacturing, IEEE Trans. on Semiconductor Manufacturing, 22(1), pp. 180-187 (2009)</li>
+              <li>“Direct control of particle size in antisolvent crystallization Part I: Model identification, experimental validation and dynamic simulation”, S. M. Nowee, A. Abbas, J. A. Romagnoli, Chemical Engineering Science, Vol. 63, Issue 22 pp.5457- 5467 (2008)</li>
+              <li>“Model-based optimal strategies for controlling particle size in antisolvent crystallization operations.”, Nowee, S.M., Abbas A. and Romagnoli J.A., Crystal Growth &amp; Design, Vol. 8, Issue 8 pp. 2698-2806 (2008)</li>
+              <li>“An intelligent /smart framework for real-time process monitoring and supervision”, B. Bhushan, J. A. Romagnoli , Modeling, Control, Simulation, and Diagnosis of Complex Industrial and Energy Systems, ISA/O3neida series, Eds. L. Ferrarini, C. Veber, Chapter 10, pp. 245, (2008) ISBN/ID: 978-1-934394-90-8</li>
+              <li>“A clustering approach for the separation of touching edges in particle images”, Korath J.M., Abbas A. and Romagnoli J.A., Particle &amp; Particle Systems Characterization, Vol. 25, Issue 2, pp. 143-152 (2008)</li>
+              <li>“Inferential Conversion and Composition Monitoring via Micro Calorimetric Measurements in Emulsion Terpolymerization”, M. H. Srour, V. G. Gomes, I. S. Altarawneh, J. A. Romagnoli, Polymer-Plastics Technology and Engineering, 47: 13–22 (2008)</li>
+              <li>“Self-Organizing Self-Clustering Network: A Strategy for Unsupervised Pattern Classification with Its Application to Fault Diagnosis”, Bharat Bhushan, Jose A. Romagnoli, Industry and Engineering Chemistry Research, No. 47, pp. 4209 – 4219 (2008)</li>
+              <li>“Separating touching and overlapping objects in particle images–a combined approach”, Korath J.M., Abbas A., Romagnoli, J.A., Chemical Engineering Transactions, 11, 167-172 (2007)</li>
+              <li>“Curriculum Intensification though integration of units of study in the Chemical Engineering degree program”, A. Abbas, J. A. Romagnoli, Trans IChemE, Part D, Education for Chemical Engineers, Vol. 2: pp.46–55 (2007)</li>
+              <li>“Optimization in seeded cooling crystallization: A parameter estimation and dynamic optimization study”, M. Nowee, A. Abbas, J. A. Romagnoli, Chemical Engineering and Processing, Vol. 46, No. 11, pp. 1096–1106 (2007)</li>
+              <li>“Online inferential product attribute estimation for optimal operation of emulsion Terpolymerization: Application to styrene/MMA/MA”, M.H. Srour, V.G. Gomes, J.A. Romagnoli, Chemical Engineering Science, Volume 62, Issue 16, pp. 4420-4438 (2007)</li>
+              <li>“Computer-aided knowledge-based monitoring and diagnostic system for emulsion copolymerization”, R. Chew, V. G. Gomes_ and J. A. Romagnoli, IChem E, Vol. 85 (A10) 1–11 (2007)</li>
+              <li>“Strategy for Process Monitoring Based on Radial Basis Function Network and Polygonal Line Algorithm”, B. Bhushan, J. A. Romagnoli, Industry and Engineering Chemistry Research, Vol. 46, No. 15, pp. 5131-5140 (2007)</li>
+              <li>“Cluster Analysis for Auto-correlated and Cyclic Chemical Process Data”, S. Beaver, A. Palazoglu, J. A. Romagnoli, Industry and Engineering Chemistry Research, Vol. 46, No. 11, pp, 3610-3622 (2007)</li>
+              <li>“Sonocrystallization of sodium chloride particles for inhalation”, A. Abbas, M. Srour, P. Tang, H. Chiou, H.K. Chan, J. A. Romagnoli, Chemical Engineering Science, Vol. 62, No. 9, pp. 2445– 2453 (2007)</li>
+              <li>“Multi-scale modelling, simulation and validation of batch cooling crystallization”, A. Abbas, J.A. Romagnoli, Separation and Purification Technology, 53, 153–163, (2007)</li>
+              <li>“Chemical engineering curriculum renewal”, Gomes V.G., Barton G.W., Petrie J.G., Romagnoli J.A., Holt P., Abbas A., Cohen B., Harris A.T., Haynes B.S., Langrish T.A.G., Orellana J., See H.T., Valix M., White D., Education for Chemical Engineers, Volume 1, Issue 1, Pages 116-125 (2006)</li>
+              <li>“Online control of molar mass and particle size distributions in emulsion polymerization”, J. Zeaiter, J.A. Romagnoli, V. Gomes, AIChE Journal, Vol. 52, No. 5, pp. 170-179 (2006)</li>
+              <li>“DCS implementation of optimal operational policies: a crystallisation case study”, Abbas A., Romagnoli J.A, International Journal of Computer Applications in Technology, Vol. 25, No. 4, pp. 198-208 (2006)</li>
+              <li>“A multi-scale orthogonal nonlinear strategy for multivariate statistical process monitoring”, A Maulud, D. Wang, J.A. Romagnoli, Journal of Process Control, Vol. 16, No. 7, pp. 671-683 (2006)</li>
+              <li>“Model-centric technologies for support of manufacturing operations”, J.A. Romagnoli, P. Rolandi, Computer-Aided Chemical Engineering, Vol. 21-A, pp. 63-70 (2006)</li>
+              <li>“A framework for modeling particle size effects in emulsion polymerization systems using computational fluid dynamics linked to a detailed population balance modeling”, R. Elgebrandt, D. Fletcher, V. Gomes, J.A. Romagnoli, Computer-Aided Chemical Engineering, Vol. 21-A, pp. 551-557 (2006)</li>
+              <li>“An integrated framework based on data driven techniques for process supervision”, B. Bhushan, J.A. Romagnoli, Computer-Aided Chemical Engineering, Vol. 21-B, pp. 1401-1407 (2006)</li>
+              <li>“Model-based optimization for operational policies in seeded cooling crystallization”, A. Abbas, M. Nowee, J.A. Romagnoli, Computer-Aided Chemical Engineering, Vol. 21-B, pp1347-1352 (2006)</li>
+              <li>“Simultaneous Dynamic Validation/Identification of Mechanistic Process Models and Reconciliation of Industrial Process Data”, P. Rolandi, J.A. Romagnoli, Computer-Aided Chemical Engineering, Vol. 21-A, pp. 267-272 (2006)</li>
+              <li>“Inferential conversion monitoring in emulsion co-polymerization through calorimetric measurements”, Alhamad B., Romagnoli J.A., Gomes V.G., International Journal of Chemical Reactor Engineering, Vol. 4, A7 (2006)</li>
+            </ul>
+          </section>
+          <section class="publication-group" data-year="2000-2005">
+            <h2 class="pub-year-heading">2000–2005</h2>
+            <ul class="pub-list">
+              <li>“Experiential engineering e-learning: the concept of soft reaction”, A. Abbas, J. Orellana, P. Rolandi, J.A. Romagnoli, World Transactions of Engineering Education, Vol. 4, No. 2, pp. 171-176 (2005)</li>
+              <li>“Generalized T distribution and its applications to process data reconciliation and process monitoring”, D. Wang and J.A. Romagnoli, Transactions of the Institute of Measurement and Control,, Vol. 27, No. 5, pp 367-390 (2005)</li>
+              <li>“Advanced modeling and optimal operating strategy in emulsion copolymerization: Application styrene/MMA”, Alhamad B., Romagnoli J.A., Gomes V.G., Chemical Engineering Science, Vol. 60, 2795-2813 (2005)</li>
+              <li>“Robust multi-scale principal components analysis with applications to process monitoring”, D. Wang and J.A. Romagnoli, Journal Of Process Control, Vol. 15,No. 8, pp 869-882 (2005)</li>
+              <li>“Analysis of shear-induced coagulation in an emulsion polymerization reactor using computational fluid dynamics”, R. C. Elgebrandt, J. A. Romagnoli, D. F. Fletcher, V. G. Gomes and R.G. Gilbert, Chemical Engineering Science, Vol. 60, Issue 7, Pages 2005-2015 (2005)</li>
+              <li>“Real-time implementation of multi-linear model-based control strategies––an application to a bench-scale pH neutralization reactor”, O. Galán, J. A. Romagnoli, A. Palazoglu, Journal of Process Control, Vol. 14, Issue 5, 571-579 (2004)</li>
+              <li>“Reactor operating strategy and secondary nucleation in emulsion polymerization”, J. Zeaiter, J.A. Romagnoli, V. Gomes, International Journal of Chemical Reactor Engineering, Vol. 2, A2 (2004)</li>
+              <li>“Detecting Abnormal Process Trends by Wavelet-Domain Hidden Markov”, W. Sun, A. Palazoglu and Jose A. Romagnoli, AIChE Journal, Vol.49, No. 1, pp. 140-150 (2003)</li>
+              <li>“Robust model predictive control design using a generalized objective function”, D. Wang, J.A. Romagnoli, Computers and Chemical Engineering, Vol. 27, pp. 965-982 (2003)</li>
+              <li>“Gap metric concept and implications for multi-linear model-based controller design”, O. Galan, J.A. Romagnoli, A. Palazoglu, Y. Arkun, Industry and Engineering Chemistry Research, Vol. 42, pp. 2189-2197 (2003)</li>
+              <li>“Framework for robust data reconciliation based on a generalized objective function” D Wang, J.A. Romagnoli, Industry and Engineering Chemistry Research, (2003)</li>
+              <li>“Supervisory regime control of non-linear processes: an application to a pilot distillation column”, Rodriguez J., Goodwin G.C., Romagnoli J.A., Journal of Process Control, Vol. 13, pp. 177-191 (2003)</li>
+              <li>“Smart enterprise for pulp and paper mills: data processing and reconciliation”, M. Sanchez, D. Leung, H. Konecsny, C. Bigaran, J.A. Romagnoli, Computer Aided Chemical Engineering, Vol. 10, pp. 763-769 (2002)</li>
+              <li>“On-line optimal control of particle size distribution in emulsion polymerization”, J. Zeaiter, J.A. Romagnoli, G. Barton, V. Gomes, Computer Aided Chemical Engineering, Vol. 10, pp. 607-613 (2002)</li>
+              <li>“An integrated framework for multi-objective optimisation in process synthesis and design”, H. Alhammadi, G. Barton, J.A. Romagnoli, B. Alexander, Computer Aided Chemical Engineering, Vol. 10, pp. 817-823 (2002)</li>
+              <li>“Hybrid modelling architecture for the solution of complex process systems”, A. Abbas, V. Guevara, J.A. Romagnoli, Computer Aided Chemical Engineering, Vol. 10, pp. 409-415 (2002)</li>
+              <li>&quot;Inferential conversion monitoring and control in emulsion polymerization through calorimetric measurements&quot;, Zeaiter, J., Gomes, V.G., Romagnoli, J.A., Barton G.W, Chemical Engineering Journal., Vol. 89, pp. 37-45 (2002)</li>
+              <li>&quot;Facilitating process control teaching and learning in a virtual laboratory environment&quot;, Murphy T., Gomes V.G., Romagnoli, J.A., Computer. Applications in Engineering Education, Wiley Periodical Inc., Vol. 10, pp. 79-87 (2002)</li>
+              <li>“Investigation of on-line optical particle characterization in reaction and cooling crystallization systems: current state of the art”, A. Abbas, D. Nobbs, J.A. Romagnoli, Measurement. Science Technology, Vol. 13, pp. 349-356 (2002)</li>
+              <li>&quot;Operation of Semi-Batch Emulsion Polymerization Reactors: Modeling, Validation and Effect of Operating Conditions&quot;, Zeaiter, J., Romagnoli, J.A., Barton G.W., Gomes, V.G. and Gilbert, R.G., Chemical Engineering Science, Vol.57, pp. 2955-2969 (2002)</li>
+              <li>“Robust control of a SAG mill”, O. Galan, G.W. Barton, J.A. Romagnoli, Powder Technology, Vol. 124, pp 264-271 (2002)</li>
+              <li>“The Role of Wave-net models in Emulsion Polymerization&quot;, Zeaiter, J., Bakhtazad, A., Romagnoli, J.A., Barton G.W, Gomes, V.G., Powder Technology, Vol. 124, pp 212-218 (2002)</li>
+              <li>“An integration mechanism for multivariable knowledge-based fault diagnosis”, D. Leung, J.A. Romagnoli, Journal of Process Control, Vol. 12, pp. 15-26 (2002)</li>
+              <li>“Wavelet-based robust filtering of process data”, F. Doymaz, A. Bakhtazad, J.A. Romagnoli, A. Palazoglu, Computers and Chemical Engineering, Vol. 25, pp. 1549-1559 (2001)</li>
+              <li>&quot;A robust strategy for real-time process monitoring&quot;, F. Doymaz, J. Chen, J.A. Romagnoli, A. Palazoglu, Journal of Process Control, Vol. 11, pp. 343-359 (2001)</li>
+              <li>&quot;On-line optimal trajectory control for a fermentation process using multi-linear models&quot;, F. Azimzadeh, O. Galan, J.A. Romagnoli, Computers and Chemical Engineering, Vol. 5, pp. 15-26 (2001)</li>
+              <li>&quot;A strategy for detection ad isolation of sensor failures and process upsets&quot;, F. Doymaz, J.A. Romagnoli, A. Palazoglu, Chemometrics and Intelligent Laboratory Systems, Vol. 55, pp. 109-123 (2001)</li>
+              <li>&quot;Dynamics of a stirred-tank heater: Intuition and Analysis&quot;, J.A. Romagnoli, A. Palazoglu, S Whitaker, Chemical Engineering Education, Vol. 35, No.1, pp.46-49 (2001)</li>
+              <li>&quot;Dynamic probabilistic model-based expert system for fault diagnosis&quot;, D. Leung, J.A. Romagnoli, Computers and Chemical Engineering, Vol. 24, pp. 2473-2492 (2000)</li>
+              <li>“Robust H(inf) Control for Nonlinear Plants Based on Multi-Linear Models – An Application to a Bench Scale Neutralization Reactor”, O. Galán, J.A. Romagnoli, A. Palazoglu, Chemical Engineering Science, Vol. 55, pp. 4435-4450 (2000)</li>
+              <li>“Process Trend Analysis Using Wavelet-Based De-noising&quot;, A. Bakhtazad, A. Palazoglu, J.A. Romagnoli, Control Engineering Practice, Vol. 8, pp. 657-663 (2000)</li>
+              <li>&quot;Web-Based Courseware in Teaching Laboratory-Based Courses&quot;, V.G. Gomes, B. Choy, G.W. Barton and J.A. Romagnoli, Global Journal of Engineering Education, Vol. 4, No. 1, pp. 65-71, (2000)</li>
+              <li>“Process synthesis and optimization tools for environmental design: methodology and structure”, B. Alexander, G. Barton, J. Petrie, J.A. Romagnoli, Computers and Chemical Engineering, Vol. 24, N0. 2-7, pp. 1195-1201 (2000)</li>
+              <li>“Optimization and control of an industrial surfactant reactor”, S. Khuu, J. Rodriguez, K.F. Ngian, J.A. Romagnoli, Computers and Chemical Engineering, Vol. 24, N0. 2-7, pp. 863-871 (2000)</li>
+              <li>“Real-time MPC supervisory system”, D. Leung, J.A. Romagnoli, Computers and Chemical Engineering, Vol. 24, N0. 2-7, pp. 285-291 (2000)</li>
+              <li>“Detection and classification of abnormal process situations using multidimensional wavelet domain hidden Markov tree”, A. Bakhtazad, A. Palazoglu, J.A. Romagnoli, Computers and Chemical Engineering, Vol. 24, N0. 2-7, pp. 769-777 (2000)</li>
+            </ul>
+          </section>
+          <section class="publication-group" data-year="1980-1999">
+            <h2 class="pub-year-heading">1980–1999</h2>
+            <ul class="pub-list">
+              <li>“Intelligent alarm filtering- a dynamic approach”, D. Leung, J.A. Romagnoli, Computers and Chemical Engineering, Vol. 23, pp. S605-609 (1999)</li>
+              <li>“Application of Wiener model predictive control (WMPC) to an industrial C2-splitter”, S. Norquay, A. Palazoglu, J.A. Romagnoli, Journal of Process Control, Vol. 9, pp. 461-473 (1999)</li>
+              <li>“A kinetic model for methanol synthesis on a commercial deactivating catalyst”, M. Rahimpour, J. Fathikalajahi, A. Jahnmiri, J.A. Romagnoli, Iranian Journal of Science &amp; Technology, Vol. 23, No. 3 Transaction B, pp. 1-7 (1999)</li>
+              <li>“Application of Wiener model predictive control (WMPC) to a pH neutralization experiment”, S. Norquay, A. Palazoglu, J.A. Romagnoli, IEEE Transactions on Control Systems Technology, Vol. 7, No. 4, pp. 1-9 (1999)</li>
+              <li>“Dynamic polymeric electrodes, dynamic computer modelling and dynamic electrochemical sensing”, ”, A. Talaie, J.Y. Lee, K. Adachi, T. Taguchi, J.A. Romagnoli, Journal of Electro-analytical Chemistry, 468, pp. 19-25 (1999)</li>
+              <li>“On-line optimization control for a time-varying process using multiple models: a laboratory scale fermenter application”, F. Azimzadeh, O. Galan, J. Bardford, J.A. Romagnoli, Computers and Chemical Engineering, Vol. 23, pp. S235-S239 (1999)</li>
+              <li>“A hybrid model formulation for a distillation column and the on-line optimisation study”, A. Safavi, A. Nooraii, J.A. Romagnoli, Journal of Process Control, Vol. 9, pp. 125-134 (1999)</li>
+              <li>“Process identification, uncertainty characterization and robustness analysis of a pilot-scale distillation column”, A. Nooraii, J.A. Romagnoli, J. Figueroa, Journal of Process Control, Vol. 9, pp. 247-264 (1999)</li>
+              <li>“Application of an engineering algorithm with software code (C4.5) for specific ion detection in the chemical industries”, A. Talaie, N. Esmaili, T. Taguchi, , J.A. Romagnoli, F. Talaie, Advances in Engineering Software, Vol. 30, pp. 13-19 (1999)</li>
+              <li>“Process data de-noising using wavelet transform”, A. Bakhtazad, A. Palazoglu, J.A. Romagnoli, Intelligent Data Analysis, Vol. 3, pp. 267-285 (1999)</li>
+              <li>“Effect of a chaotropic nature of supporting electrolytes on the electrochemical properties of conducting polymers: a study using an in-situ/real time technique”, A. Talaie, T. Taguchi, K. Adachi, J.A. Romagnoli, International Journal of Polymer Analysis and. Characterization., Vol. 4, pp.267-281 (1998)</li>
+              <li>“Polymer surfaces, Interfaces and computer modelling: an investigation of new intelligent materials for sensing application”, A. Talaie, T. Taguchi, K. Adachi, M. Zivdar, J.A. Romagnoli, Journal of Intelligent Material Systems and Structures, Vol. 9, pp. 74-78 (1998)</li>
+              <li>“Outlier detection in process plant data”, J. Chen, A. Bandoni, J.A. Romagnoli, Computers and Chemical Engineering, Vol. 22, No. 3-4, pp. (1998)</li>
+              <li>“Implementation of advanced operational and control techniques for a pilot distillation column within a DCS environment”, A. Nooraii, J.A. Romagnoli, Computers and Chemical Engineering, Vol. 4-5, pp. 695-708 (1998)</li>
+              <li>“Introduction to a novel polymeric composite-based interface: fabrication, characterization and application”, A. Talaie, K. Adachi, T. Taguchi, J.A. Romagnoli, Composite Interfaces, Vol. 5, No. 5, pp. 461-468 (1998)</li>
+              <li>“A new application of soft-computing theory to conducting polymer sensors: a pH estimation study, A. Talaie, A.R. Mirhosseini, J.A. Romagnoli, T. Taguchi, Computational and theoretical Polymer Science, Vol. 8, No. ¾, pp. 291-295 (1998)</li>
+              <li>“Model predictive control based on Wiener models”, S. Norquay, A. Palazoglu, J.A. Romagnoli, Chemical Engineering. Science, Vol. 53, No. 1, pp. 75-84 (1998)</li>
+              <li>“Dynamic simulation and control of an industrial surfactant reactor”, S. Khuu, J.A. Romagnoli, P. Barhi, G. Weiss, Computers and Chemical Engineering, Vol. 22, pp. S715-S718 (1998)</li>
+              <li>“Towards real time ion classification using a machine learning algorithm (C4.5): a case study of a conducting polymer ion detector”, A. Talaie, J.A. Romagnoli, N. Esmaili, T. Taguchi, Iranian Polymer Journal, Vol. 6, No. 3, pp. 185-194 (1997)</li>
+              <li>“Application of wavelet-based neural networks to the modelling and optimisation of an experimental distillation column”, A.A. Safavi, J.A. Romagnoli, Engineering Applications of Artificial. Intelligence, Vol. 10, No. 3 pp. 301-313 (1997)</li>
+              <li>“Comments on nonlinear black box modelling in system identification: A unified overview”, A.A. Safavi, J.A. Romagnoli, Automatica, Vol. 33, No. 6 pp. 1197-1198 (1997)</li>
+              <li>“Application of artificial intelligence methods in conducting polymer based sensors”, A. Talaie, J.A. Romagnoli, Iranian Polymer Journal, Vol. 6, No. 1, pp. 53-61 (1997)</li>
+              <li>“Towards an on-line conducting polymer composite based chemical sensor using behavioural fuzzy clustering modelling technique”, A. Talaie, T. Taguchi , A. .Mirhosseini, J.A. Romagnoli, Smart Material Structures, No. 6, pp. 601-606 (1997)</li>
+              <li>“Robustness analysis of a pilot-scale distillation column&quot;, A. Nooraii, J.A. Romagnoli, Computers and Chem. Eng., Vol. 21, No. 7, pp. 703-717 (1997)</li>
+              <li>“Operability considerations in chemical processes: a switchability analysis”, L. Vu, P. Barhi, J.A. Romagnoli, Computers and Chemical Engineering, Vol. 21, pp. S143-S149 (1997)</li>
+              <li>“Wavelets-based density estimation and application to process monitoring”, A. Safavi, J. Chen, J.A. Romagnoli, AIChE Journal, Vol.43, No. 5, pp. 1227-1241 (1997)</li>
+              <li>&quot;Integrated flexibility and controllability analysis in the design of chemical processes&quot;, P. Barhi, A. Bandoni, J.A. Romagnoli, AIChE Journal, Vol. 43, No. 4, pp.997-1015 (1997)</li>
+              <li>“Robust estimation of measurement error variance/covariance from process sampling data”, J. Chen, A. Bandoni, J.A. Romagnoli, Computers and Chemical Engineering, Vol. 21, No. 6, pp.593-600 (1997)</li>
+              <li>“An integrated artificial neural network/polymer based pH sensor: a new engineering perspective to conducting polymer technology ”, A. Talaie, J.A. Romagnoli, Synthetic Metals, Vol. 82, pp. 231-235 (1996)</li>
+              <li>“Application of artificial neural networks to the real-time operation of conducting polymer sensors: a pattern recognition approach”, A. Talaie, J.A. Romagnoli, Synthetic Metals, Vol. 82, pp. 27-33 (1996)</li>
+              <li>&quot;Approximate models for nonlinear process control&quot;, G. Sentoni, O. Agamennoni, A. Desages, Romagnoli J. A., AIChE Journal, Vol. 42, No. 8, pp. 2240-2251 (1996)</li>
+              <li>“Data reconciliation: an industrial case study”, J.A. Romagnoli, K. Islam, G. Weiss, Computers and Chemical Engineering, Vol. 20, No. 12, pp. 1441-1449 (1996)</li>
+              <li>“Robust PCA and normal region in multivariable statistical process monitoring”, J. Chen, A. Bandoni, J.A. Romagnoli, AIChE Journal, Vol. 42, No. 12, pp. 3563-3566 (1996)</li>
+              <li>“Robust statistical process monitoring”, J. Chen, A. Bandoni, J.A. Romagnoli, Computers and Chemical Engineering, Vol.20., pp. S497-S502(1996)</li>
+              <li>“Steady-state back-off calculation: use of piecewise linear approximation”, J. Figueroa, A. Desages, J.A. Romagnoli, Computers and Chemical Engineering, Vol.20., pp. S527-S532 (1996)</li>
+              <li>“Gross measurements error detection/identification for an industrial ethylene reactor”, M. Sanchez, G. Sentoni, S. Schbib, S. Tonelli, J.A. Romagnoli, Computers and Chemical Engineering, Vol. 20., pp S1559-S1564 (1996)</li>
+              <li>“Operability assessment in chemical plants”, P Barhi, A. Bandoni, J.A. Romagnoli, Computers and Chemical Engineering, Vol. 20, pp. S787-S792 (1996)</li>
+              <li>&quot;Effect of disturbances in optimizing control: the steady-state open-loop back-off problem&quot;, P. Barhi, A. Bandoni, J.A. Romagnoli, AIChE Journal, Vol. 42, No. 4, pp. 983-994 (1996)</li>
+              <li>&quot;Use of orthogonal transformations in data reconciliation&quot;, M. Sanchez, J.A. Romagnoli, Computers and Chemical Engineering, Vol.20, No.5, pp. 483-493 (1996)</li>
+              <li>&quot;Disturbance rejection with bounded control action: loop shaping methodology&quot;, J. Figueroa, O. Agamennoni, J.A. Romagnoli, AIChE Journal, Vol. 42, No. 2, pp. 466-476 (1996)</li>
+              <li>&quot;A loop Shaping technique for feedback controller design&quot;, O. Agamennoni, J. Figueroa, A. Palazoglu, J.A. Romagnoli, Computers and Chemical Engineering, Vol. 20, No. 1, pp. 27-37 (1996)</li>
+              <li>&quot;Optimizing control of a pilot scale distillation column”, A. Nooraii, J.A. Romagnoli, Acta Chimica Slovenica, Vol. 12,No. 1, pp. 93-100 (1995)</li>
+              <li>“On the evaluation of a certain kind of approximation structure”, G. Sentoni, O. Agamennoni, J.A. Romagnoli, Latin American Applied Research, Vol. 25S,pp 35-40 (1995)</li>
+              <li>“New results on robust controller design for chemical processes”, A. Palazoglu, J.A. Romagnoli, NATO-ASI Series, Methods of Model Based Process Control, R. Berber Ed., pp. 221-235 (1995)</li>
+              <li>&quot;An industrial implementation of advanced control strategies&quot;, J. Figueroa, O. Agamennoni, G. Barton, J. Lear, J.A. Romagnoli, NATO-ASI Series, Methods of Model Based Process Control, R. Berber Ed., pp. 683-800 (1995)</li>
+              <li>&quot;Back-off calculations in optimising control: a dynamic approach&quot;, P. Barhi, A. Bandoni, J.A. Romagnoli, Computers and Chemical Engineering, Vol. 19, S pp. 699-708 (1995)</li>
+              <li>&quot;Wavelets: a brief introduction to concepts, implementations and applications&quot;, A. Safavi, J.A. Romagnoli, The Journal of Computer Science and Engineering, Vol. 1, No. 4, pp. 94-193 (1995)</li>
+              <li>&quot;Nonlinear control of a CSTR: disturbance rejection using sliding mode control&quot;, C. Colantonio, A. Desages, J.A. Romagnoli, A. Palazoglu, Industry and Engineering Chemistry Research, Vol. 34, No. 7,pp. 2383-2392 (1995)</li>
+              <li>&quot;Variable structure control with a second-order sliding condition: application to a steam generator&quot;, H. Chiachiarini, A. Desages, A. Palazoglu, J.A. Romagnoli, Automatica, Vol. 31, No. 8, pp. 1157-1168 (1995)</li>
+              <li>&quot;Economic impact of disturbances in chemical processes-a dynamic analysis&quot;, J. Figueroa, P. Barhi, J.A. Romagnoli, IFAC Workshop on &quot;Integration of Process Design and Control&quot; (IPDC &#x27;94), pp. 141-147, Also in Computers and Chemical Engineering, Vol. 20, No. 4, pp. 453-461(1996)</li>
+              <li>&quot;An algorithm for robust pole assignment via polynomial approach&quot;, J. Figueroa, J.A. Romagnoli, IEEE Transactions on Automatic Control, (1994).</li>
+              <li>&quot;Advanced control strategies for an industrial column&quot;, O. Agamennoni, J. Figueroa, G. Barton, J.A. Romagnoli, International Journal of Control, Vol. 59, No. 3, pp. 817-839 (1994)</li>
+              <li>&quot;On the design of simpler robust de-couplers with joint stability and performance specifications&quot;, J. Figueroa, G. Barton, J.A. Romagnoli, Computers and Chemical Engineering , Vol. 18, No. 5, pp. 415-425 (1994)</li>
+              <li>&quot;Dynamic and control of an industrial hydrogenation reactor&quot;, S. Schbib, A. Errazu, J.A. Porras, J.A. Romagnoli, Computers and Chemical Engineering, Vol.18. Suppl., pp. (1994)</li>
+              <li>&quot;On optimizing control and the effect of disturbances: calculation of the open-loop back-offs, A. Bandoni, G. Barton, J.A. Romagnoli, Computers and Chemical Engineering, Vol.18, Suppl., pp.505-509 (1994).</li>
+              <li>&quot;Non-linear data reconciliation for an industrial pyrolysis reactor&quot;, K. Islam, G. Weiss, J.A. Romagnoli, Computers and Chemical Engineers, Vol.18, Suppl., pp.217-221 (1994).</li>
+              <li>&quot;DICOF: A package for multivariable controller design in frequency domain&quot;, Agamennoni O., Romagnoli J.A., CACHE, Vol. 36, pp.15-17 (1993).</li>
+              <li>&quot;Artificial neural networks in process modelling and control&quot;, Romagnoli J.A., Process and Control Engineering, Vol.6, No. 3, pp.69-71 (1993).</li>
+              <li>&quot;An algorithm for controller reduction with performance and stability requirements&quot;, Rotstein, H., Figueroa, J., Desages, A. and Romagnoli, J.A., Control theory and Advanced Technology, Vol. 9, No. 3, pp. 671-689 (1993).</li>
+              <li>&quot;Influence of cooling design on fixed-bed reactors dynamics&quot;, V. Bucalá, D.O. Borio, J. Porras, J.A. Romagnoli, AIChE Journal, Vol.38,No. 12,pp. 1990-1994 (1992).</li>
+              <li>&quot;Robust performance determination in the presence of plant uncertainties a polynomial approach&quot;, G. Bortolotto, A. Desages, J.A. Romagnoli, Computers and Chemical Eng., Vol.16, Suppl., pp.173 (1992).</li>
+              <li>&quot;Linearized dynamic model of an industrial low density polyethylene plant&quot;, S. Schbib, S. Tonelli, E. Brignole, J.A. Romagnoli, Computers and Chemical Engineering, Vol. 17, Suppl., pp. 323 (1992).</li>
+              <li>&quot;PLADAT: a package for process variable classification and plant data reconciliation, M. Sanchez, A. Bandoni, J.A. Romagnoli, Computers and Chemical Engineering, Vol. 16, Suppl., pp. 499 (1992).</li>
+              <li>&quot;Thermodynamic tuning in separation processes simulation and design&quot;, Urlic L., Bottini S., Brignole, E. and Romagnoli, J.A., Computers and Chemical Engineering, Vol. 16, No., pp, (1992).</li>
+              <li>&quot;Approximate models for control of nonlinear systems&quot;, Paolini E., Romagnoli, J.A., Desages, A. and Palazoglu, A., Chemical Engineering Science, Vol. 47, No. 5, pp. 1161 1171 (1992).</li>
+              <li>&quot;A multivariable delay compensation scheme&quot;, Agamennoni, O. Desages, A. and Romagnoli, J.A., Chemical Engineering Science, Vol. 47, No.5, pp.1173-1185(1992).</li>
+              <li>&quot;Controller order reduction for process control systems&quot;, Figueroa, J., Romagnoli, J.A., Desages, A. and Palazoglu, A., Computers and Chemical Engineering, Vol. 16, No. 6, pp. 593-603 (1992).</li>
+              <li>&quot;Optimal tuning of discrete PID controllers using Lyapunov direct method: robustness analysis&quot;, G. Bortolotto, A. Desages, J.A. Romagnoli, Chemical Engineering Communications, Vol. 109, pp. 7-18 (1991).</li>
+              <li>&quot;Highly structured stability margins for process control systems: a case study of to decoupling control in distillation&quot;, Figueroa, J., Romagnoli, J.A., Desages, A. and Palazoglu, A., Computers and Chemical Engineering, Vol. 15, No. 7, pp. 493-502 (1991).</li>
+              <li>&quot;A transformation approach to nonlinear process control&quot;, Khambanonda, T., Palazoglu, A. and Romagnoli, J.A., AIChE Journal, Vol. 37, No. 7, pp. 1082-1092 (1991).</li>
+              <li>&quot;Robust characteristics polynomial assignment&quot;, Rotstein, H., Pena, R., Bandoni, A., Desages, A. and Romagnoli, J.A., Automatica, Vol. 27, No. 4, pp.711-715 (1991).</li>
+              <li>&quot;Catastrophes, bifurcations and degeneracy via feedback system theory&quot;, Moiola J., Desages, A. and Romagnoli, J.A., Latin American Applied Research, Vol. 21, No. 1, pp. 39-45 (1991)</li>
+              <li>“Application of higher-order bifurcation formulae&quot;, Colantonio, C., Padin, M. Desages, A. and Romagnoli, J.A., IEEE Transaction Automatic Control, Vol. 36, No. 6,, pp. 746-749 (1991).</li>
+              <li>&quot;Improved robustness measures in time domain&quot;, Rotstein, H., Figueroa, J., Desages, A. and Romagnoli, J.A., Latin American Applied Research, Accepted (In Print).</li>
+              <li>&quot;A robust/cautious model predictive controller&quot;, Fruzetti, K., Palazoglu, A., Romagnoli, J.A. and McDonald, K., Journal of Process Control, Vol. 1, pp. 187-196 (1991).</li>
+              <li>“Degenerate Hopf bifurcations via feedback system theory: higher order harmonic balance&quot;, Moiola, J., Desages, A. and Romagnoli, J.A., Chemical Engineering Science, Vol. 46, No. 5/6, pp. 1475-1490 (1991).</li>
+              <li>&quot;Robust controller design methodology for multivariable chemical processes: Stability and performance considerations&quot;, Figueroa, J., Agamennoni, O., Desages, A. and Romagnoli, J.A., Chemical Engineering Science, Vol. 46, No. 5/6, pp. 1299-1310 (1991).</li>
+              <li>&quot;Computing bifurcation points via characteristic loci&quot;, Moiola, J., Desages, A. and Romagnoli, J.A., IEEE Trans. on Automatic Control, Vol. 36, No. 3, pp. 358-362 (1991).</li>
+              <li>&quot;Linear Programming with uncertainty: Application to an industrial apple juice plant&quot;, A. Bandoni, J.A. Romagnoli, E. Rotstein, Latin American Applied Research, Vol.20, No. 3/4, pp. 189-201 (1990).</li>
+              <li>&quot;Optimization under uncertainty in inequality constrained linear programs&quot;, Bandoni, J., Romagnoli, J.A. and Rotstein, E., Latin American Applied Research, Vol. 20, No. 3/4, pp. 189-204 (1990).</li>
+              <li>&quot;Dynamic and control of a distillation train without recycle streams&quot;, Brignole, B., Ruiz, C. and Romagnoli, J.A., Industrial Engineering Chemistry Research, Vol. 29, No. 9, pp. 1875-1889 (1990).</li>
+              <li>&quot;On data reconciliation with simultaneous adjustment of measurements and functional model coefficients&quot;, Bandoni, A., Desages, A., Brignole, E. and Romagnoli, J.A., Computer Applications in Chemical Engineering, Ed. Bussemaker, H. T. and Iedema P.D., Elsevier Science Publishers B.V., Amsterdam, pp. 369-374 (1990).</li>
+              <li>&quot;Computer aided analysis and control of a distillation train&quot;, Brignole, N.B., Brignole, E.A. and Romagnoli, J.A., Computer Applications in Chemical Engineering, Ed. Bussemaker, H. T. and Iedema, P.D., Elsevier Science Publishers, B.V., Amsterdam, pp. 171-176 (1990).</li>
+              <li>&quot;Computer package for transient analysis of industrial multiple-effect evaporators&quot;, Tonelli, S., Romagnoli, J.A. and Porras, J.A., Journal of Food Engineering, Vol. 12, pp. 267-281 (1990).</li>
+              <li>&quot;Bifurcation analysis via feedback system theory&quot;, Moiola, J., Desages, A. and Romagnoli, J.A., Chemical Engineering Science, Vol. 45, No. 7, pp. 1863-1874 (1990).</li>
+              <li>&quot;Mathematical programming with uncertainty: application to robust control&quot;, Rotstein, H., Bandoni, A., Desages, A. and Romagnoli, J.A., Computers and Chemical Engineering, Vol. 14, No. 4/5, pp. 373-379 (1990).</li>
+              <li>&quot;Necessary and sufficient conditions for robust stabilisation with fixed order controllers&quot;, Rotstein, H., Bandoni, A., Desages, A. and Romagnoli, J.A., C-TAT Control Theory and Advanced Technology, Vol. 6, No. 1, pp. 75-91 (1990).</li>
+              <li>&quot;On the stability analysis of non-linear feedback systems&quot;, Khambanonda, T., Palazoglu, A. and Romagnoli, J.A., AIChE Journal, Vol. 36, No. 1, pp. 66-74 (1990).</li>
+              <li>&quot;Bifurcations and degeneracy in a CSTR with reactions ABC&quot;, Moiola, J., Colantonio, C., Desages, A.C. and Romagnoli, J.A., Chemical Engineering Science, Vol. 45, No. 1, pp. 297-305 (1990).&quot;Automatic tuning of PID controllers with finite time horizon&quot;, Bortolotto, G., Desages, A.C. and Romagnoli, J.A., Chemical Engineering Communications, Vol. 86, pp. 17-29 (1989).</li>
+              <li>&quot;Robust controller design methodology for multivariable chemical processes: Structure perturbations&quot;, Agamennoni, O., Rotstein, H., Desages, A.C. and Romagnoli, J.A., Chemical Engineering Science, Vol. 44, No. 11, pp. 2597-2605 (1989).</li>
+              <li>&quot;Steady and non-steady state modelling of tubular fixed bed reactors&quot;, Gatica, J., Porras, J., Errazu, A. and Romagnoli, J.A., Chemical Engineering Communications, Vol. 78, pp. 73-96 (1989).</li>
+              <li>&quot;Robustness analysis in reduced order controller&quot;, Rotstein, H., Desages, A. and Romagnoli, J.A., IEEE. Transaction on Automatic Control, Vol. 34, No. 4, pp. 457-459 (1989).</li>
+              <li>&quot;Calculation of highly structured stability margins&quot;, Rotstein, H., Desages, A.C. and Romagnoli, J.A., International Journal of Control, Vol. 49, No. 3, pp. 1079-1092 (1989).</li>
+              <li>&quot;Hopf bifurcation in a CSTR using characteristic loci&quot;, Colantonio. M.C., Moiola, J., Desages, A.C. and Romagnoli, J.A., Chemical Engineering Science, Vol. 44, No. 3, pp. 595-602 (1989).</li>
+              <li>&quot;Uncertainty in linear programming&quot;, Bandoni, A., Romagnoli, J.A., Numerical and Applied Mathematics, Brezinski, C. (Editor), Baltzer, J.C., AG, Scientific Publishing Co. IMACS pp. 635-640 (1989).</li>
+              <li>&quot;On the statistical treatment of material balances&quot;, Desages, A., Bortolotto, G. and Romagnoli, J.A., Latin American Applied Research, Vol. 18, pp. 31-42 (1988).</li>
+              <li>&quot;Observer design based on modal reduction techniques: application to distillation columns&quot;, Gatica, J., Porras, J.A. and Romagnoli, J.A., Modelling and Simulation of Systems, Breedveld, P., Baltzer, J.C. (Editors), Scientific Publishing Co., IMACS, pp. 361-365 (1989).</li>
+              <li>&quot;Robust controller design methodology for multivariable chemical processes&quot;, Agamennoni, O., Desages, A. and Romagnoli, J.A., Chemical Engineering Science, Vol. 43, No. 11, pp. 2937-2950 (1988).</li>
+              <li>&quot;Simulation modelling and optimal operation of an apple juice concentrate plant&quot;, Bandoni, J.A., Rotstein, E. and Romagnoli, J.A., Journal of Food Engineering 7, pp. 159-175 (1988).</li>
+              <li>&quot;Controller design for model-plant parameter mismatch&quot;, Romagnoli, J.A. Karim, N., Agamennoni, O. and Desages, A., IEEE Proceedings Part D Control Theory and Applications, Vol. 135, No. 2, pp. 157-164 (1988).</li>
+              <li>&quot;A joint experimental design procedure for parameter estimation&quot;, Gatica, J., Porras, J.A. and Romagnoli, J.A., Chemical Engineering Communications, Vol. 50, pp. 135-153 (1987).</li>
+              <li>&quot;Data processing for instrument failure detection in dynamical systems&quot;, Porras, J.A. and Romagnoli, J.A., Applied Modelling and Simulation of Technological Systems, Elsevier Science Publisher, Eds. P. Borne &amp; S. Tzafestas, pp. 91-98 (1987).</li>
+              <li>&quot;On the order reduction in frequency domain&quot;, Rotstein, H., Donate, E.P., Desages, A. and Romagnoli, J.A., Applied Modelling and Simulation of Technological Systems, Elsevier Science Publisher, Eds. P. Borne &amp; S. Tzafestas, pp. 183-1909 (1987).</li>
+              <li>&quot;Numerical studies in solving dynamic distillation problems&quot;, Lagar, G., Paloschi J., Romagnoli, J.A., Computers and Chemical Engineering, Vol. 11, No. 4, pp. 383-394 (1987).</li>
+              <li>&quot;Adaptive control scheme for SISO processes with delays&quot;, Agamennoni, O., Desages, A. and Romagnoli, J.A., Industrial Engineering Chemistry Research, Vol. 26, No. 4 (1987).</li>
+              <li>“Procesamiento continuo de polímeros reactivos: II producción de tubos sólidos&quot;, Crespo, N., Castro, J.M. and Romagnoli J.A., Latín American Journal of Chemical Engineering, 16, pp. 325-335 (1986)</li>
+              <li>&quot;Diseño de controladores mutivariables robustos&quot;, Agamennoni, O., Desages, A., Romagnoli, J.A., Revista Telegráfica Electrónica, Vol. 75, pp. 783-790 (1986)</li>
+              <li>&quot;Control studies in an extractive distillation process: simulation and measurement structure&quot;, Gani, R., Romagnoli, J.A. and Stephanopoulos, G., Chemical Engineering Communications, Vol. 40, pp. 281-302 (1986)</li>
+              <li>&quot;Implementation of a failure detection-identification algorithm for dynamic systems&quot;, Microcomputer Applications, Vol. 5, No. 2, pp. 124-128 (1986)</li>
+              <li>&quot;Sensitivity and operability analysis for separation processes&quot;, Romagnoli, J.A., Brignole, E. and Gani, R., Computers and Chemical Engineering, Vol. 9, pp. 418 (1986)</li>
+              <li>&quot;Controller design for model-plant mismatch&quot;, Agamennoni, O., Desages, A. and Romagnoli, J.A. and Karim, N., ISA. Automatic Control Systems No. 85.06684, pp. 441-451 (1985). Also published in Advances in Instrumentation, Vol. 40, Part I (1985)</li>
+              <li>&quot;On-line implementation of a multi-channel estimator&quot;, Bortolloto, G., Urbicain, M.J. and Romagnoli, J.A., Computers and Chemical Engineering, Vol. 9, No. 4, pp. 351-357 (1985)</li>
+              <li>&quot;A simple algorithm for sensitivity and operability analysis of separation processes&quot;, Brignole, E., Gani, R. and Romagnoli, J.A., I&amp;EC. Process Design and Development, 24, pp. 42-48 (1985).</li>
+              <li>&quot;Comparison of numerical methods for the solution of transient problems in the processing of reactive systems&quot;, Crespo, N., Castro, J.M. and Romagnoli, J.A., Mecanica Computational, Vol. 1, pp. 184 (1985).</li>
+              <li>&quot;Control studies in an industrial apple juice evaporator&quot;, Lozano, J., Elustondo, M.P. and Romagnoli, J.A., Journal of Food Science, 49 (1984)</li>
+              <li>&quot;The prediction of properties and its influence on the design and modelling of super-fractionators&quot;, Hernandez, M.R., Gani, R., Romagnoli, J.A. and Brignole, E., Foundations of Computed Aided Design, pp. 709-749, CACHE (1984)</li>
+              <li>&quot;User derived modules speed programming&quot;, Porras, J.A., Gatica, J., Romagnoli, J.A. and Moretti, J.L., Oil and Gas Journal, March 12 (1984)</li>
+              <li>&quot;Adaptive Strategies for distillation column control&quot;, Del Pino O., Gani, R., Romagnoli, J.A. and Alvarez, J., ISA. Automatic Control Systems, pp. 639 (1983). Also published in Advances in Instrumentation, Vol. 38 (1983)</li>
+              <li>&quot;Predicting conversion using temperature as the measured variable in the RIM process. part II: Implementation of the on-line corrective algorithm&quot;, Del Pino O., Romagnoli, J.A., and Castro, J.M., Polymer Engineering and Science, Vol. 23, No. 16, pp. 895-901 (1983)</li>
+              <li>&quot;Predicting conversion using temperature as the measured variable in the RIM process. part I: simulation and measurement structure&quot;, Romagnoli, J.A. and Castro, J.M., Polymer Engineering and Science, Vol. 23, No. 2, pp. 105-112 (1983)</li>
+              <li>&quot;Studies of distributed parameter systems: decoupling the state parameter estimation problem&quot;, Romagnoli, J.A. and Gani, R., Chemical Engineering Science, Vol. 38, No. 11 pp. 1831-1843 (1983)</li>
+              <li>&quot;On data reconciliation: constraint processing and treatment of bias&quot;, Romagnoli, J.A., Chemical Engineering Science, Vol. 38, No. 7, pp. 1107-1117 (1983)</li>
+              <li>&quot;Estructura de medidas y control en procesos de separación&quot;, Gani, R., Romagnoli, J.A., Cuadernos del CAMAT, Santa Fe, Octubre (1982)</li>
+              <li>&quot;Strategy for the measurement structure selection in a fluid catalytic cracking unit with continuous catalyst feed&quot;, Romagnoli, J.A., Alvarez, J. and Stephanopoulos, G., Latin-American Journal of Chemical Engineering, Vol. 12, pp. 1-71 (1982)</li>
+              <li>&quot;Variable measurement structure for control of a tubular reactor&quot;, Romagnoli, J.A., Alvarez, J. and Stephanopoulos, G., Chemical Engineering Science, Vol. 36, No. 10, pp. 1965-1719 (1981)</li>
+              <li>&quot;Rectification of processes measurement data in the presence of gross errors&quot;, Romagnoli, J.A., and Stephanopoulos, G., Chemical Engineering Science, Vol. 36, No. 11, pp. 1849-1863 (1981)</li>
+              <li>&quot;Variable measurement structures for process control&quot;, Romagnoli, J.A., Alvarez, J. and Stephanopoulos, G., International Journal of Control .Vol. 33, No. 2, pp. 269-289 (1981)</li>
+              <li>&quot;On the rectification of measurement errors for complex chemical plants&quot;, Romagnoli, J.A., Stephanopoulos G., Chemical Engineering Science, Vol. 35, pp. 1067-1081 (1980)</li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> PSE@LSU. All rights reserved.</p>
+      <p>Louisiana State University</p>
+    </div>
+  </footer>
+
+  <script src="../assets/script.js"></script>
+  <script>
+    const filterButtons = document.querySelectorAll('.pub-filter');
+    const publicationGroups = document.querySelectorAll('.publication-group');
+    const searchInput = document.querySelector('.pub-search');
+    let selectedYear = 'all';
+
+    function updatePublications() {
+      const query = searchInput.value.trim().toLowerCase();
+
+      publicationGroups.forEach(group => {
+        const matchesYear = selectedYear === 'all' || group.dataset.year === selectedYear;
+        let visibleItems = 0;
+
+        group.querySelectorAll('.pub-list li').forEach(item => {
+          const matchesSearch = item.textContent.toLowerCase().includes(query);
+          const showItem = matchesYear && matchesSearch;
+          item.classList.toggle('hidden', !showItem);
+          if (showItem) visibleItems += 1;
+        });
+
+        group.classList.toggle('hidden', visibleItems === 0);
+      });
+    }
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        selectedYear = button.dataset.year;
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+        updatePublications();
+      });
+    });
+
+    searchInput.addEventListener('input', updatePublications);
+  </script>
+</body>
+</html>

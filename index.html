@@ -9,14 +9,21 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="icon" type="image/png" href="assets/images/logos/PSE/PSE-logo-10.png">
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
+
 <body>
   <header class="site-header">
     <nav class="nav container" aria-label="Primary navigation">
-      <a class="brand" href="#home" aria-label="PSE at LSU home">
+      <!-- <a class="brand" href="#home" aria-label="PSE at LSU home">
         <span class="brand-mark">PSE</span>
         <span class="brand-text">PSE@LSU</span>
-      </a>
+      </a> -->
+      <a class="brand" href="#home" aria-label="PSE at LSU home">
+        <img src="assets/images/logos/PSE/PSE-logo-9.png" alt="PSE@LSU logo" class="brand-logo">
+        <!-- <span class="brand-text">PSE@LSU</span> -->
+      </a>      
       <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
@@ -66,7 +73,11 @@
 
         <figure class="welcome-image-card">
           <img src="assets/images/people/Jose1.jpg" alt="PSE@LSU welcome image">
+          <figcaption class="eyebrow welcome-caption">
+            Prof. José Romagnoli, lead of PSE@LSU
+          </figcaption>
         </figure>
+
       </div>
     </section>
 
@@ -84,7 +95,8 @@
               the design, optimization, and control of complex systems. It combines
               mathematical modeling, data analysis, and computational tools to improve
               how processes are developed and operated across industries such as energy,
-              manufacturing, and sustainability.
+              manufacturing, materials, and sustainability. In particular, we are focused on advancing
+              the field of PSE through applying Artificial Intelligence and Machine Learning techniques. 
             </p>
 
             <a href="#more" class="btn-primary">Learn More</a>
@@ -102,21 +114,54 @@
       <div class="container">
         <div class="section-heading">
           <p class="eyebrow">Research Areas</p>
-          <h2>Key areas of research in process systems engineering</h2>
+          <h2>PSE at the Intersection of AI</h2>
         </div>
+
         <div class="feature-grid">
-          <article class="feature-card">
-            <h3>Process Monitoring</h3>
-            <p>Build models to monitor and analyze complex process systems for faults.</p>
-          </article>
-          <article class="feature-card">
-            <h3>Process Control</h3>
-            <p>Model predictive control, monitoring, and automation strategies for safe and reliable operation.</p>
-          </article>
-          <article class="feature-card">
-            <h3>AI for Materials</h3>
-            <p>Applying artificial intelligence and machine learning techniques to discover and optimize new materials for various applications.</p>
-          </article>
+
+          <a href="_research/process-control.html" class="feature-card research-card">
+            <div class="research-icon">
+              <i data-lucide="settings"></i>
+            </div>
+            <h3>Process Systems & Control</h3>
+            <p>
+              Optimization, advanced control strategies, and decision-making frameworks
+              for complex chemical and energy systems, from unit operations to refinery-scale processes.
+            </p>
+          </a>
+
+          <a href="_research/data-modeling.html" class="feature-card research-card">
+            <div class="research-icon">
+              <i data-lucide="monitor-cloud"></i>
+            </div>
+            <h3>Data-Driven Modeling & Monitoring</h3>
+            <p>
+              Developing process models of industrial systems to gain insights into their behavior, optimize performance, and ensure safe and efficient operation.
+            </p>
+          </a>
+
+          <a href="_research/ai-materials.html" class="feature-card research-card">
+            <div class="research-icon">
+              <i data-lucide="atom"></i>
+            </div>
+            <h3>AI for Chemical & Materials Systems</h3>
+            <p>
+              Application of artificial intelligence and machine learning to molecular design and
+              materials discovery.
+            </p>
+          </a>
+
+          <a href="_research/intelligent-systems.html" class="feature-card research-card">
+            <div class="research-icon">
+              <i data-lucide="bot"></i>
+            </div>
+            <h3>Intelligent Systems & Automation</h3>
+            <p>
+              AI-assisted decision-making, agentic frameworks, and autonomous systems for
+              next-generation process operations and human-in-the-loop intelligence.
+            </p>
+          </a>
+
         </div>
       </div>
     </section>
@@ -138,23 +183,23 @@
         </figure>
 
         <div class="people-options" aria-label="People categories">
-          <a class="people-option-card" href="process-systems-engineering-chair.html">
+          <a class="people-option-card" href="_people/process-systems-engineering-chair.html">
             <span>Process Systems Engineering Chair</span>
             <span aria-hidden="true">→</span>
           </a>
-          <a class="people-option-card" href="graduate-students.html">
+          <a class="people-option-card" href="_people/graduate-students.html">
             <span>Graduate Students</span>
             <span aria-hidden="true">→</span>
           </a>
-          <a class="people-option-card" href="undergraduate-students.html">
+          <a class="people-option-card" href="_people/undergraduate-students.html">
             <span>Undergraduate Students</span>
             <span aria-hidden="true">→</span>
           </a>
-          <a class="people-option-card" href="visiting-scholars.html">
+          <a class="people-option-card" href="_people/visiting-scholars.html">
             <span>Visiting Scholars</span>
             <span aria-hidden="true">→</span>
           </a>          
-          <a class="people-option-card" href="alumni.html">
+          <a class="people-option-card" href="_people/alumni.html">
             <span>Alumni</span>
             <span aria-hidden="true">→</span>
           </a>
@@ -165,24 +210,92 @@
     <section id="products" class="section products-section section-purple">
       <div class="container">
         <div class="section-heading">
-          <p class="eyebrow">Tools & Technology</p>
-          <h2>Products and platforms from the PSE@LSU research ecosystem</h2>
-          <!-- <p>Showcase software tools, datasets, decision-support platforms, lab resources, and prototypes developed by the group.</p> -->
+          <p class="eyebrow">Available Products</p>
+          <h2>Easy to use. Advanced features. Better insights.</h2>
         </div>
-        <div class="feature-grid">
-          <article class="feature-card">
-            <h3>FastMAN-JMP</h3>
-            <p>Uncover insights from complex process systems using advanced machine learning algorithms.</p>
-          </article>
-          <article class="feature-card">
-            <h3>SimWiz</h3>
-            <p>Simulate a Liquified Natural Gas (LNG) HYSYS simulation for data collection and preocess control studies.</p>
-          </article>
-          <article class="feature-card">
-            <h3>ProcessLens</h3>
-            <p>Study plant operations and performance using advanced analytics, including Large Language Models (LLMs) assisted process insights.</p>
-          </article>
+
+        <div class="product-carousel" aria-label="Available products carousel">
+          <button class="product-arrow product-prev" aria-label="Previous product">‹</button>
+
+          <div class="product-track">
+            <article class="product-card">
+              <img src="assets/images/products/fastman.png" alt="FastMAN-JMP">
+              <div class="product-card-body">
+                <h3>FastMAN-JMP</h3>
+                <p>FastMAN is a data-driven tool that uses dimensional reduction, clustering, and visualization to extract insights from raw process data. It also defines normal operating regions to support supervised fault detection.</p>
+                <a class="btn btn-primary" href="#">Learn More</a>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <img src="assets/images/products/simwiz.png" alt="SimWiz">
+              <div class="product-card-body">
+                <h3>SimWiz</h3>
+                <p>SimWiz is an interactive platform that simulates chemical plants—from individual units to full systems—using a user-friendly, menu-based interface with no programming required. It enables operation, visualization, and data analysis in a DCS-like environment and is adaptable across the chemical engineering curriculum.</p>
+                <a class="btn btn-primary" href="#">Learn More</a>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <img src="assets/images/products/coming-soon.png" alt="ProcessLens">
+              <div class="product-card-body">
+                <h3>ProcessLens</h3>
+                <p>Study plant operations with advanced analytics and LLM-assisted process insights.</p>
+                <a class="btn btn-primary" href="#">Learn More</a>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <img src="assets/images/products/coming-soon.png" alt="SMILES Data Processor & Molecular Design Platform">
+              <div class="product-card-body">
+                <h3>SMILES Data Processor & Molecular Design Platform</h3>
+                <p>Simulate LNG HYSYS systems for data collection and process control studies.</p>
+                <a class="btn btn-primary" href="#">Learn More</a>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <img src="assets/images/products/geaux-tune-4.png" alt="GeauxTune">
+              <div class="product-card-body">
+                <h3>GeauxTune</h3>
+                <p>Software to build and tune PID controllers.</p>
+                <a class="btn btn-primary" href="#">Learn More</a>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <img src="assets/images/products/coming-soon.png" alt="TigerSense">
+              <div class="product-card-body">
+                <h3>TigerSense</h3>
+                <p>A unified platform for real-time data processing, machine learning analytics, and context-aware AI reasoning.</p>
+                <a class="btn btn-primary" href="#">Learn More</a>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <img src="assets/images/products/coming-soon.png" alt="TigerChem">
+              <div class="product-card-body">
+                <h3>TigerChem</h3>
+                <p>An interactive computational platform for molecular property research.</p>
+                <a class="btn btn-primary" href="#">Learn More</a>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <img src="assets/images/products/auto-pilot.png" alt="AUTO-PILOT">
+              <div class="product-card-body">
+                <h3>AUTO-PILOT</h3>
+                <p>A reinforcement learning-based platform for autonomous process control.</p>
+                <a class="btn btn-primary" href="#">Learn More</a>
+              </div>
+            </article>
+
+          </div>
+
+          <button class="product-arrow product-next" aria-label="Next product">›</button>
         </div>
+
+        <div class="product-dots" aria-label="Product slider navigation"></div>
       </div>
     </section>
 
@@ -193,15 +306,15 @@
           <h2>Supporting Textbooks and Learning Resources</h2>
         </div>
         <div class="resource-grid">
-          <a class="resource-card" href="#contact">
+          <a class="resource-card" href="_resources/control.html">
             <img src="assets/images/resources/control.jpg" alt="Introduction to Process Control">
             <span>Introduction to Process Control</span>
           </a>
-          <a class="resource-card" href="#products">
+          <a class="resource-card" href="_resources/ai-che.html">
             <img src="assets/images/resources/ai-che.jpg" alt="AI in Chemical Engineering">
             <span>AI in Chemical Engineering</span>
           </a>
-          <a class="resource-card" href="#publications">
+          <a class="resource-card" href="_resources/data-recon.html">
             <img src="assets/images/resources/data-recon.png" alt="Data Processing and Reconciliation">
             <span>Data Processing and Reconciliation for Chemical Process Operations</span>
           </a>
@@ -247,7 +360,7 @@
         </div>
 
         <div style="text-align:center; margin-top: 32px;">
-          <a class="btn btn-primary" href="publications.html">View All Publications</a>
+          <a class="btn btn-primary" href="_publications/publications.html">View All Publications</a>
         </div>
       </div>
     </section>
@@ -294,6 +407,7 @@
     </section>
 
     <section id="contact" class="section contact-section section-purple">
+      <div class="spacer" style="height: 50px;"></div>
       <div class="container contact-card">
         <div>
           <p class="eyebrow">Get in Touch</p>
@@ -314,5 +428,10 @@
   </footer>
 
   <script src="assets/script.js"></script>
+
+  <script>
+    lucide.createIcons();
+  </script>
+
 </body>
 </html>

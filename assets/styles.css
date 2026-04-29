@@ -314,7 +314,7 @@ h3 {
 
 .feature-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 22px;
 }
 
@@ -343,9 +343,7 @@ h3 {
    PRODUCTS
 ========================= */
 
-.products-section {
-  /* Background controlled by .section-white / .section-purple */
-}
+
 
 /* =========================
    RESOURCES
@@ -951,6 +949,11 @@ h3 {
   object-fit: cover;
 }
 
+.welcome-caption {
+  text-align: center;
+  padding: 12px 16px 16px;
+}
+
 /* =========================
    RESPONSIVE
 ========================= */
@@ -1136,5 +1139,345 @@ h3 {
   .about-pse-image {
     order: 2;
     padding: 1.5rem;
+  }
+}
+
+/* =========================
+   Brand Logo (for header)
+========================= */
+
+.brand-logo {
+  max-height: 100px;
+  width: auto;
+  height: auto;
+  display: block;
+}
+
+
+/* =========================
+   PRODUCTS CAROUSEL
+========================= */
+
+.product-carousel {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 18px;
+}
+
+.product-track {
+  display: flex;
+  gap: 28px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 10px 4px 28px;
+  scrollbar-width: none;
+}
+
+.product-track::-webkit-scrollbar {
+  display: none;
+}
+
+.product-card {
+  flex: 0 0 calc((100% - 56px) / 3);
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  box-shadow: 0 16px 48px rgba(40, 16, 79, 0.08);
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 64px rgba(40, 16, 79, 0.16);
+  border-color: rgba(70, 29, 124, 0.28);
+}
+
+.product-card img {
+  width: 100%;
+  max-width: 220px;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  display: block;
+  margin-top: 26px;
+  padding: 10px;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover img {
+  transform: scale(1.04);
+}
+
+.product-card-body {
+  padding: 18px 24px 28px;
+}
+
+.product-card-body h3 {
+  margin-bottom: 12px;
+}
+
+.product-card-body p {
+  color: var(--muted);
+  margin: 0 0 22px;
+}
+
+.product-arrow {
+  width: 46px;
+  height: 46px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--lsu-purple);
+  color: white;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 14px 30px rgba(70, 29, 124, 0.24);
+  transition: transform 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+}
+
+.product-arrow:hover {
+  background: var(--deep-purple);
+  transform: translateY(-2px);
+}
+
+.product-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.product-dot {
+  width: 10px;
+  height: 10px;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(70, 29, 124, 0.25);
+  cursor: pointer;
+  transition: width 0.25s ease, background 0.25s ease;
+}
+
+.product-dot.active {
+  width: 28px;
+  background: var(--lsu-purple);
+}
+
+@media (max-width: 900px) {
+  .product-card {
+    flex-basis: 78%;
+  }
+}
+
+@media (max-width: 620px) {
+  .product-carousel {
+    grid-template-columns: 1fr;
+  }
+
+  .product-arrow {
+    display: none;
+  }
+
+  .product-card {
+    flex-basis: 88%;
+  }
+}
+
+
+/* =========================
+   Control Textbook
+========================= */
+.control-hero {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 48px;
+  align-items: center;
+  margin-top: 42px;
+}
+
+.control-hero-copy p:not(.eyebrow):not(.hero-text) {
+  max-width: 720px;
+  color: #4f566b;
+  font-size: 1.06rem;
+}
+
+.control-book-card {
+  padding: 0;
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+
+.control-book-card img {
+  width: 100%;
+  display: block;
+  border-radius: 16px;
+
+  /* NEW border styling */
+  border: 2px solid rgba(70, 29, 124, 0.2);
+  box-shadow: 0 18px 40px rgba(40, 16, 79, 0.18);
+}
+
+.control-sections {
+  display: grid;
+  gap: 24px;
+}
+
+.control-section-card {
+  padding: 34px;
+}
+
+.control-section-card h2 {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  margin-bottom: 20px;
+}
+
+.control-section-card ul {
+  margin: 0;
+  padding-left: 22px;
+  color: #4f566b;
+}
+
+.control-section-card li {
+  margin-bottom: 14px;
+}
+
+.control-section-card p {
+  color: #4f566b;
+}
+
+.control-section-card a {
+  color: var(--lsu-purple);
+  font-weight: 700;
+}
+
+.control-section-card a:hover {
+  text-decoration: underline;
+}
+
+.control-links-grid {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 34px;
+  align-items: center;
+}
+
+.control-links-grid img {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 16px 40px rgba(40, 16, 79, 0.14);
+}
+
+@media (max-width: 840px) {
+  .control-hero,
+  .control-links-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .control-book-card img,
+  .control-links-grid img {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+}
+
+/* =========================
+   RESEARCH CARDS (Animated)
+========================= */
+
+.research-card {
+  padding: 28px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  text-align: center;
+}
+
+.research-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 64px rgba(40, 16, 79, 0.16);
+  border-color: rgba(70, 29, 124, 0.28);
+}
+
+.research-icon {
+  width: 56px;
+  height: 56px;
+  display: grid;
+  place-items: center;
+
+  margin: 0 auto 18px auto; /* 🔥 centers horizontally */
+
+  border-radius: 18px;
+  background: var(--surface-soft);
+  border: 1px solid var(--line);
+
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.research-card:hover .research-icon {
+  transform: scale(1.08);
+  background: #efe6ff;
+}
+
+/* Lucide icon sizing */
+.research-icon svg {
+  width: 28px;
+  height: 28px;
+  stroke: var(--lsu-purple);
+  stroke-width: 2.2;
+}
+
+/* =========================
+   RESEARCH DETAIL PAGES
+========================= */
+
+.research-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.research-detail-grid.reverse .research-detail-image {
+  order: 2;
+}
+
+.research-detail-grid.reverse .research-detail-content {
+  order: 1;
+}
+
+.research-detail-image {
+  overflow: hidden;
+  border-radius: 28px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.research-detail-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.research-detail-content p:not(.eyebrow) {
+  color: var(--muted);
+  font-size: 1.06rem;
+}
+
+@media (max-width: 840px) {
+  .research-detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .research-detail-grid.reverse .research-detail-image,
+  .research-detail-grid.reverse .research-detail-content {
+    order: initial;
   }
 }
