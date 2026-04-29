@@ -20,7 +20,8 @@
       <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
-        <li><a href="#research">Research</a></li>
+        <li><a href="#about">About PSE</a></li>
+        <li><a href="#research">Research Areas</a></li>
         <li><a href="#people">People</a></li>
         <li><a href="#products">Products</a></li>
         <li><a href="#resources">Resources</a></li>
@@ -32,166 +33,232 @@
   </header>
 
   <main id="home">
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-copy">
+    <section class="home-slideshow section-white" aria-label="PSE@LSU slideshow">
+      <div class="slideshow">
+        <img class="slide active" src="assets/images/slideshow/all.jpg" alt="PSE@LSU research group slide 1">
+        <img class="slide" src="assets/images/slideshow/Awards.jpg" alt="PSE@LSU research group slide 2">
+        <img class="slide" src="assets/images/slideshow/marcus.jpg" alt="PSE@LSU research group slide 3">
+        <img class="slide" src="assets/images/slideshow/P1.png" alt="PSE@LSU research group slide 4">
+        <img class="slide" src="assets/images/slideshow/P2.png" alt="PSE@LSU research group slide 5">
+        <img class="slide" src="assets/images/slideshow/P3.png" alt="PSE@LSU research group slide 6">
+        <img class="slide" src="assets/images/slideshow/stadium.png" alt="PSE@LSU research group slide 7">
+        <img class="slide" src="assets/images/slideshow/top3.png" alt="PSE@LSU research group slide 8">
+        <img class="slide" src="assets/images/slideshow/windows view2.jpg" alt="PSE@LSU research group slide 9">
+        <img class="slide" src="assets/images/people/current-group.jpg" alt="PSE@LSU research group slide 10">
+        <img class="slide" src="assets/images/slideshow/sw6front.jpg" alt="PSE@LSU research group slide 11">
+      </div>
+    </section>
+
+    <section class="welcome-section section section-purple">
+      <div class="container welcome-grid">
+        <div class="welcome-copy">
           <p class="eyebrow">Process Systems Engineering Research Group</p>
-          <h1>Advancing intelligent, sustainable, and resilient process systems.</h1>
+          <h1>Welcome</h1>
           <p class="hero-text">
             Welcome to <strong>PSE@LSU</strong>, a research group at Louisiana State University focused on optimization,
             process control, data-driven modeling, and decision-making for complex chemical, energy, and manufacturing systems.
           </p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#research">Explore Research</a>
+            <a class="btn btn-primary" href="#research">Explore Research Areas</a>
             <a class="btn btn-secondary" href="#contact">Work With Us</a>
           </div>
         </div>
-        <div class="hero-card" aria-label="Research highlights">
-          <div class="card-ring"></div>
-          <h2>Research Themes</h2>
-          <ul>
-            <li>Optimization & decision-making</li>
-            <li>Advanced process control</li>
-            <li>Data-driven process modeling</li>
-            <li>Sustainable energy systems</li>
-          </ul>
+
+        <figure class="welcome-image-card">
+          <img src="assets/images/people/Jose1.jpg" alt="PSE@LSU welcome image">
+        </figure>
+      </div>
+    </section>
+
+    <section id="about" class="section section-white">
+      <div class="container">
+        <div class="about-pse-layout">
+
+          <div class="about-pse-content">
+            <p class="eyebrow">About PSE</p>
+
+            <h2>What is Process Systems Engineering?</h2>
+
+            <p>
+              PSE is a field of engineering focused on
+              the design, optimization, and control of complex systems. It combines
+              mathematical modeling, data analysis, and computational tools to improve
+              how processes are developed and operated across industries such as energy,
+              manufacturing, and sustainability.
+            </p>
+
+            <a href="#more" class="btn-primary">Learn More</a>
+          </div>
+
+          <div class="about-pse-image">
+            <img src="assets/images/logos/PSE/PSE-logo.png" alt="PSE Research Group at LSU Logo">
+          </div>
+
         </div>
       </div>
     </section>
 
-    <section id="research" class="section">
+    <section id="research" class="section section-purple">
       <div class="container">
         <div class="section-heading">
-          <p class="eyebrow">What We Do</p>
-          <h2>Research at the intersection of engineering, computing, and sustainability</h2>
+          <p class="eyebrow">Research Areas</p>
+          <h2>Key areas of research in process systems engineering</h2>
         </div>
         <div class="feature-grid">
           <article class="feature-card">
-            <h3>Systems Optimization</h3>
-            <p>Mathematical programming, scheduling, planning, and uncertainty-aware decision support for complex process systems.</p>
+            <h3>Process Monitoring</h3>
+            <p>Build models to monitor and analyze complex process systems for faults.</p>
           </article>
           <article class="feature-card">
             <h3>Process Control</h3>
             <p>Model predictive control, monitoring, and automation strategies for safe and reliable operation.</p>
           </article>
           <article class="feature-card">
-            <h3>AI for Engineering</h3>
-            <p>Hybrid modeling, machine learning, digital twins, and interpretable analytics for process design and operation.</p>
+            <h3>AI for Materials</h3>
+            <p>Applying artificial intelligence and machine learning techniques to discover and optimize new materials for various applications.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="people" class="section section-muted">
-      <div class="container split">
-        <div>
+    <section id="people" class="section people-section section-white">
+      <div class="container">
+        <div class="section-heading center">
           <p class="eyebrow">Our Group</p>
-          <h2>Collaborative, rigorous, and impact-driven.</h2>
+          <h2>Collaborative, Diverse, and Experienced.</h2>
+          <p>
+            Led by <strong>Prof. José A. Romagnoli</strong>, PSE@LSU brings together faculty,
+            graduate students, undergraduate researchers, and visiting scholars
+            across a range of areas in chemical engineering and process systems engineering.
+          </p>
         </div>
-        <p>
-          PSE@LSU brings together faculty, graduate students, undergraduate researchers, and collaborators to solve high-impact
-          problems in chemical engineering and related fields. We welcome motivated students and partners interested in systems research.
-        </p>
+
+        <figure class="group-photo-card">
+          <img src="assets/images/people/current-group.jpg" alt="Current PSE@LSU research group">
+        </figure>
+
+        <div class="people-options" aria-label="People categories">
+          <a class="people-option-card" href="process-systems-engineering-chair.html">
+            <span>Process Systems Engineering Chair</span>
+            <span aria-hidden="true">→</span>
+          </a>
+          <a class="people-option-card" href="graduate-students.html">
+            <span>Graduate Students</span>
+            <span aria-hidden="true">→</span>
+          </a>
+          <a class="people-option-card" href="undergraduate-students.html">
+            <span>Undergraduate Students</span>
+            <span aria-hidden="true">→</span>
+          </a>
+          <a class="people-option-card" href="visiting-scholars.html">
+            <span>Visiting Scholars</span>
+            <span aria-hidden="true">→</span>
+          </a>          
+          <a class="people-option-card" href="alumni.html">
+            <span>Alumni</span>
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
       </div>
     </section>
 
-
-
-    <section id="products" class="section products-section">
+    <section id="products" class="section products-section section-purple">
       <div class="container">
         <div class="section-heading">
           <p class="eyebrow">Tools & Technology</p>
           <h2>Products and platforms from the PSE@LSU research ecosystem</h2>
-          <p>Showcase software tools, datasets, decision-support platforms, lab resources, and prototypes developed by the group.</p>
+          <!-- <p>Showcase software tools, datasets, decision-support platforms, lab resources, and prototypes developed by the group.</p> -->
         </div>
         <div class="feature-grid">
           <article class="feature-card">
-            <h3>Optimization Toolkits</h3>
-            <p>Computational frameworks for scheduling, planning, control, and uncertainty-aware process systems decision-making.</p>
+            <h3>FastMAN-JMP</h3>
+            <p>Uncover insights from complex process systems using advanced machine learning algorithms.</p>
           </article>
           <article class="feature-card">
-            <h3>Digital Twin Platforms</h3>
-            <p>Hybrid model-based and data-driven environments for monitoring, simulation, prediction, and operational insight.</p>
+            <h3>SimWiz</h3>
+            <p>Simulate a Liquified Natural Gas (LNG) HYSYS simulation for data collection and preocess control studies.</p>
           </article>
           <article class="feature-card">
-            <h3>Open Research Assets</h3>
-            <p>Reusable models, benchmark problems, code repositories, and educational materials for the PSE community.</p>
+            <h3>ProcessLens</h3>
+            <p>Study plant operations and performance using advanced analytics, including Large Language Models (LLMs) assisted process insights.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="resources" class="section section-muted resources-section">
+    <section id="resources" class="section resources-section section-white">
       <div class="container">
         <div class="section-heading center">
           <p class="eyebrow">Resources</p>
           <h2>Supporting Textbooks and Learning Resources</h2>
-          <!-- <p>Add group resources, onboarding links, teaching materials, code repositories, datasets, and frequently used LSU resources here.</p> -->
         </div>
         <div class="resource-grid">
-
           <a class="resource-card" href="#contact">
             <img src="assets/images/resources/control.jpg" alt="Introduction to Process Control">
             <span>Introduction to Process Control</span>
           </a>
-
           <a class="resource-card" href="#products">
             <img src="assets/images/resources/ai-che.jpg" alt="AI in Chemical Engineering">
             <span>AI in Chemical Engineering</span>
           </a>
-
           <a class="resource-card" href="#publications">
             <img src="assets/images/resources/data-recon.png" alt="Data Processing and Reconciliation">
             <span>Data Processing and Reconciliation for Chemical Process Operations</span>
           </a>
-
         </div>
       </div>
     </section>
 
-    <section id="publications" class="section publications-section">
+    <section id="publications" class="section publications-section section-purple">
       <div class="container">
         <div class="section-heading">
           <p class="eyebrow">Publications</p>
-          <h2>Selected publications and scholarly output</h2>
-          <p>Replace these examples with journal articles, conference proceedings, book chapters, and preprints from the group.</p>
+          <h2>Recent publications</h2>
+          <p>Selected recent work from the PSE@LSU research group.</p>
         </div>
-        <div class="publication-list" aria-label="Selected publications">
+
+        <div class="publication-list">
           <article class="publication-card">
             <p class="publication-year">2026</p>
             <div>
-              <h3>Title of a recent PSE@LSU publication</h3>
-              <p>Authors. Journal or Conference Name. Add DOI, preprint, or publisher link.</p>
+              <h3>Graph-Based, Time-Warped Embedding for Time Series Analysis and Process Monitoring</h3>
+              <p>K. Territo, J. A. Romagnoli. Industrial &amp; Engineering Chemistry Research, Vol 65/Issue 8 (2026)</p>
             </div>
           </article>
+
           <article class="publication-card">
-            <p class="publication-year">2025</p>
+            <p class="publication-year">2026</p>
             <div>
-              <h3>Optimization and control for sustainable process systems</h3>
-              <p>Authors. Journal or Conference Name. Add DOI, preprint, or publisher link.</p>
+              <h3>Toward harnessing AI for surfactant chemistry: Prediction of critical micelle concentration</h3>
+              <p>G.T. Marchan, T.O. Balogun, K. Territo, D. Das, T. Olayiwola, R. Kumar, J. A Romagnoli. Computational Materials Science, Vol. 265, pp.114548 (2026)</p>
             </div>
           </article>
+
           <article class="publication-card">
-            <p class="publication-year">2024</p>
+            <p class="publication-year">2026</p>
             <div>
-              <h3>Data-driven modeling for resilient manufacturing operations</h3>
-              <p>Authors. Journal or Conference Name. Add DOI, preprint, or publisher link.</p>
+              <h3>Uncovering Structure–Conductivity Relationships in Anion Exchange Membranes (AEMs) Using Interpretable Machine Learning</h3>
+              <p>
+                P. Naghshnejad, D. Das, J. A. Romagnoli, R. Kumar, J. Chen. Membranes, 16(1), 12 (2026). 
+                <a href="https://doi.org/10.3390/membranes16010012" target="_blank" rel="noopener">DOI</a>
+              </p>
             </div>
           </article>
+        </div>
+
+        <div style="text-align:center; margin-top: 32px;">
+          <a class="btn btn-primary" href="publications.html">View All Publications</a>
         </div>
       </div>
     </section>
 
-    <section id="sponsors" class="section sponsors-section">
+    <section id="sponsors" class="section sponsors-section section-white">
       <div class="container">
         <div class="section-heading center">
           <p class="eyebrow">Support & Collaboration</p>
           <h2>Sponsors and Collaborators</h2>
-          <!-- <p>Replace these placeholders with official sponsor/collaborator names and logos.</p> -->
         </div>
         <div class="sponsor-split">
-
-          <!-- Sponsors -->
           <div>
             <h3>Sponsors</h3>
             <div class="sponsor-grid">
@@ -205,7 +272,6 @@
             </div>
           </div>
 
-          <!-- Collaborators -->
           <div>
             <h3>Collaborators</h3>
             <div class="sponsor-grid">
@@ -220,21 +286,20 @@
               <div class="sponsor-card"><img src="assets/images/logos/collaborators/fluence.jpg" alt="Fluence Analytics"></div>
               <div class="sponsor-card"><img src="assets/images/logos/collaborators/beijing.jpg" alt="Beijing University of Chemical Technology"></div>
               <div class="sponsor-card"><img src="assets/images/logos/collaborators/Xergy.jpg" alt="Xergy"></div>
-              <div class="sponsor-card"><img src="assets/images/logos/collaborators/ESPOL.png" alt="Xergy"></div>
+              <div class="sponsor-card"><img src="assets/images/logos/collaborators/ESPOL.png" alt="ESPOL"></div>
             </div>
           </div>
-
         </div>        
       </div>
     </section>
 
-    <section id="contact" class="section contact-section">
+    <section id="contact" class="section contact-section section-purple">
       <div class="container contact-card">
         <div>
           <p class="eyebrow">Get in Touch</p>
           <h2>Interested in collaborating with us?</h2>
           <p>Contact the group to discuss research partnerships, student opportunities, and more.</p>
-          <p>email: <a href="mailto:jose@lsu.edu"></a>jose@lsu.edu</a></p>
+          <p>email: <a href="mailto:jose@lsu.edu">jose@lsu.edu</a></p>
         </div>
         <a class="btn btn-primary" href="mailto:jose@lsu.edu">Contact Us</a>
       </div>
