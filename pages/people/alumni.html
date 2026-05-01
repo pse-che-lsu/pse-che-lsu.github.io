@@ -5,58 +5,61 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>PSE@LSU | Alumni</title>
   <meta name="description" content="Alumni of the PSE@LSU research group." />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="../../assets/styles.css" />
   <link rel="icon" type="image/png" href="../../assets/images/logos/PSE/PSE-logo-10.png">
 </head>
 
 <body>
-  <header class="site-header">
-    <nav class="nav container" aria-label="Primary navigation">
-      <!-- <a class="brand" href="../index.html#home" aria-label="PSE at LSU home">
-        <span class="brand-mark">PSE</span>
-        <span class="brand-text">PSE@LSU</span>
-      </a> -->
-      <a class="brand" href="#home" aria-label="PSE at LSU home">
-        <img src="../../assets/images/logos/PSE/PSE-logo-9.png" alt="PSE@LSU logo" class="brand-logo">
-        <!-- <span class="brand-text">PSE@LSU</span> -->
-      </a>       
-      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
-      <ul class="nav-links">
-        <li><a href="../../index.html#home">Home</a></li>
-        <li><a href="../../index.html#research">Research</a></li>
-        <li><a href="../../index.html#people">People</a></li>
-        <li><a href="../../index.html#products">Products</a></li>
-        <li><a href="../../index.html#resources">Resources</a></li>
-        <li><a href="../../index.html#publications">Publications</a></li>
-        <li><a href="../../index.html#sponsors">Sponsors</a></li>
-        <li><a href="../../index.html#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <main>
-    <section class="section">
-      <div class="container">
+<header class="site-header">
+  <nav class="nav container">
+    <a class="brand" href="../../index.html#home">
+      <img src="../../assets/images/logos/PSE/PSE-logo-9.png" class="brand-logo">
+    </a>
+    <button class="nav-toggle">☰</button>
+    <ul class="nav-links">
+      <li><a href="../../index.html#home">Home</a></li>
+      <li><a href="../../index.html#about">About PSE</a></li>
+      <li><a href="../../index.html#research">Research Areas</a></li>
+      <li><a href="../../index.html#people">People</a></li>
+      <li><a href="../../index.html#products">Products</a></li>
+      <li><a href="../../index.html#resources">Resources</a></li>
+      <li><a href="../../index.html#publications">Publications</a></li>
+      <li><a href="../../index.html#sponsors">Sponsors</a></li>
+      <li><a href="../../index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
-        <a href="../../index.html#people" class="btn btn-secondary">← Back to People</a>
+<main>
 
-        <div class="section-heading" style="margin-top: 28px;">
-          <!-- <p class="eyebrow">Our Group</p> -->
-          <h1>Alumni</h1>
-          <!-- <p>Explore alumni from the Process Systems Engineering research group.</p> -->
-        </div>
+<section class="section section-purple">
+  <div class="container section-heading center">
+    <div style="text-align:left; margin-bottom:32px;">
+      <a href="../../index.html#people" class="btn btn-secondary">← Back to People</a>
+    </div>
+    <p class="eyebrow">Our Group</p>
+    <h1>Alumni</h1>
+    <p>Explore alumni from the PSE@LSU research group.</p>
+  </div>
+</section>
 
-        <figure class="alumni-hero-photo">
-          <img src="../../assets/images/alumni/alumni.png" alt="ESCAPE 2006 alumni group photo">
-          <figcaption>ESCAPE 2006: Rebecca. Pablo. Mostafa. Jose. Hasan. Ali.</figcaption>
-        </figure>
+<section class="section section-white">
+<div class="container">
 
-        <div class="alumni-dropdowns">
+<figure class="alumni-hero-photo">
+<img src="../../assets/images/alumni/alumni.png">
+<figcaption>ESCAPE 2006: Rebecca. Pablo. Mostafa. Jose. Hasan. Ali.</figcaption>
+</figure>
 
-            <details class="alumni-dropdown">
+<div class="alumni-dropdowns">
+
+<details class="alumni-dropdown">
             <summary>Louisiana State University, USA</summary>
             <div class="alumni-dropdown-content">
 
@@ -384,20 +387,20 @@
 
             </div>
             </details>
+</div>
+</div>
+</section>
 
-        </div>
+</main>
 
-      </div>
-    </section>
-  </main>
+<footer class="footer">
+  <div class="container footer-inner">
+    <p>© <span id="year"></span> PSE@LSU. All rights reserved.</p>
+    <p>Louisiana State University</p>
+  </div>
+</footer>
 
-  <footer class="footer">
-    <div class="container footer-inner">
-      <p>© <span id="year"></span> PSE@LSU. All rights reserved.</p>
-      <p>Louisiana State University</p>
-    </div>
-  </footer>
+<script src="../../assets/script.js"></script>
 
-  <script src="../../assets/script.js"></script>
 </body>
 </html>

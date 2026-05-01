@@ -4,69 +4,118 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Intelligent Systems & Automation | PSE@LSU</title>
+  <meta name="description" content="Intelligent Systems & Automation research area at PSE@LSU." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="../../assets/styles.css" />
+  <link rel="icon" type="image/png" href="../../assets/images/logos/PSE/PSE-logo-10.png">
 </head>
 
 <body>
-<header class="site-header">
-  <nav class="nav container">
-    <a class="brand" href="../../index.html#home">
-      <img src="../../assets/images/logos/PSE/PSE-logo-9.png" class="brand-logo">
-    </a>
-  </nav>
-</header>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Primary navigation">
+      <a class="brand" href="../../index.html#home" aria-label="PSE at LSU home">
+        <img src="../../assets/images/logos/PSE/PSE-logo-9.png" alt="PSE@LSU logo" class="brand-logo">
+      </a>
 
-<main>
-<section class="section section-purple">
-  <div class="container section-heading center">
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
 
-    <div style="text-align:left; margin-bottom:32px;">
-      <a href="../../index.html#research" class="btn btn-secondary">← Back to Research Areas</a>
+      <ul class="nav-links">
+        <li><a href="../../index.html#home">Home</a></li>
+        <li><a href="../../index.html#about">About PSE</a></li>
+        <li><a href="../../index.html#research">Research Areas</a></li>
+        <li><a href="../../index.html#people">People</a></li>
+        <li><a href="../../index.html#products">Products</a></li>
+        <li><a href="../../index.html#resources">Resources</a></li>
+        <li><a href="../../index.html#publications">Publications</a></li>
+        <li><a href="../../index.html#sponsors">Sponsors</a></li>
+        <li><a href="../../index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section section-purple">
+      <div class="container section-heading center">
+
+        <div style="text-align:left; margin-bottom:32px;">
+          <a href="../../index.html#research" class="btn btn-secondary">
+            ← Back to Research Areas
+          </a>
+        </div>
+
+        <p class="eyebrow">Research Area</p>
+        <h1>Intelligent Systems & Automation</h1>
+        <p>
+          Advancing intelligent automation by integrating data-driven learning, real-time monitoring, and control strategies to enable autonomous, adaptive, and optimized industrial operations.
+        </p>
+      </div>
+    </section>
+
+    <section class="section section-white">
+      <div class="container research-detail-grid">
+        <div class="research-detail-image">
+          <div class="research-detail-img-card">
+            <img src="../../assets/images/research/automation-1.png" alt="Autonomous Process Operation">
+          </div>
+        </div>
+
+        <div class="research-detail-content">
+          <p class="eyebrow">Intelligent Monitoring & Diagnosis</p>
+          <h2>Agent-Based Process Monitoring & Knowledge Integration</h2>
+          <p>Modern industrial processes generate large volumes of real-time and historical data that must be interpreted to detect faults and maintain reliable operation. Intelligent monitoring frameworks leverage both offline learning and online data streams to extract operational knowledge, identify abnormal behavior, and diagnose root causes. By integrating unsupervised learning with process context, these systems enable a deeper understanding of process dynamics beyond traditional rule-based monitoring.</p>
+          <p>Agent-based architectures provide a modular approach to process supervision, where specialized agents perform tasks such as fault detection, diagnosis, recovery, and knowledge management. Real-time data from plant systems (e.g., DCS) is continuously evaluated using learned models, while contextual information—such as process knowledge, P&IDs, and control logic—is incorporated to support decision-making. This framework enables adaptive monitoring, interpretable diagnostics, and coordinated response strategies for complex industrial environments.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-purple">
+      <div class="container research-detail-grid reverse">
+        <div class="research-detail-image">
+          <div class="research-detail-img-card">
+            <img src="../../assets/images/research/automation-2.png" alt="Human-in-the-Loop Intelligence">
+          </div>
+        </div>
+
+        <div class="research-detail-content">
+          <p class="eyebrow">Autonomous Systems</p>
+          <h2>Multi-Agentic Frameworks</h2>
+          <p>Next-generation automation systems integrate learning, monitoring, and control within a unified architecture to enable intelligent and autonomous operation. Through real-time data synchronization and interaction with plant systems, these frameworks support continuous analysis of process behavior while leveraging structured knowledge bases for efficient information retrieval and reasoning.</p>
+          <p>An orchestration layer coordinates multiple intelligent modules, including learning systems for forecasting and optimization, monitoring systems for fault detection and reporting, and control systems for enforcing optimal and constraint-aware operation. By combining reinforcement learning, model predictive control, and data-driven analytics, these architectures enable closed-loop decision-making that adapts to changing process conditions while maintaining safety, efficiency, and performance.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-white">
+      <div class="container research-detail-grid">
+        <div class="research-detail-image">
+          <div class="research-detail-img-card">
+            <img src="../../assets/images/research/automation-3.png" alt="Autonomous Process Operation">
+          </div>
+        </div>
+
+        <div class="research-detail-content">
+          <p class="eyebrow">Agent-based Control and Optimization</p>
+          <h2>Deep Reinforced Learning (DRL)</h2>
+          <p>For Optimal Control. Ex. control polymerization reactor</p>
+          <p>For Process Optimiation. Ex. Optimization of bio-reactor</p>
+          <p>For Basic Controller Tuning. Ex. Autotuning of PID controller</p>
+        </div>
+      </div>
+    </section>
+    
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> PSE@LSU. All rights reserved.</p>
+      <p>Louisiana State University</p>
     </div>
+  </footer>
 
-    <p class="eyebrow">Research Area</p>
-    <h1>Intelligent Systems & Automation</h1>
-    <p>Placeholder intro about AI-driven automation.</p>
-  </div>
-</section>
-
-<section class="section section-white">
-  <div class="container research-detail-grid">
-    <div class="research-detail-image">
-      <img src="../../assets/images/research/placeholder1.jpg" alt="Autonomous Process Operation">
-    </div>
-    <div class="research-detail-content">
-      <p class="eyebrow">Automation</p>
-      <h2>Autonomous Process Operation</h2>
-      <p>Placeholder text.</p>
-      <p>Placeholder text.</p>
-    </div>
-  </div>
-</section>
-
-<section class="section section-purple">
-  <div class="container research-detail-grid reverse">
-    <div class="research-detail-image">
-      <img src="../../assets/images/research/placeholder2.jpg" alt="Human-in-the-Loop Intelligence">
-    </div>
-    <div class="research-detail-content">
-      <p class="eyebrow">AI Systems</p>
-      <h2>Human-in-the-Loop Intelligence</h2>
-      <p>Placeholder text.</p>
-      <p>Placeholder text.</p>
-    </div>
-  </div>
-</section>
-</main>
-
-<footer class="footer">
-  <div class="container footer-inner">
-    <p>© <span id="year"></span> PSE@LSU. All rights reserved.</p>
-    <p>Louisiana State University</p>
-  </div>
-</footer>
-
-<script src="../../assets/script.js"></script>
+  <script src="../../assets/script.js"></script>
 </body>
 </html>

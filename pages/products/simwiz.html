@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SimWiz | PSE@LSU</title>
+  <meta name="description" content="SimWiz - Interactive chemical plant simulation platform from PSE@LSU." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../assets/styles.css" />
+  <link rel="icon" type="image/png" href="../../assets/images/logos/PSE/PSE-logo-10.png">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <nav class="nav container" aria-label="Primary navigation">
+      <a class="brand" href="../../index.html#home">
+        <img src="../../assets/images/logos/PSE/PSE-logo-9.png" class="brand-logo">
+      </a>
+
+      <button class="nav-toggle">☰</button>
+
+      <ul class="nav-links">
+        <li><a href="../../index.html#home">Home</a></li>
+        <li><a href="../../index.html#about">About PSE</a></li>
+        <li><a href="../../index.html#research">Research Areas</a></li>
+        <li><a href="../../index.html#people">People</a></li>
+        <li><a href="../../index.html#products">Products</a></li>
+        <li><a href="../../index.html#resources">Resources</a></li>
+        <li><a href="../../index.html#publications">Publications</a></li>
+        <li><a href="../../index.html#sponsors">Sponsors</a></li>
+        <li><a href="../../index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+
+    <!-- HERO -->
+    <section class="section section-purple">
+      <div class="container" style="
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        align-items:center;
+        gap:40px;
+      ">
+
+        <!-- LEFT: TEXT -->
+        <div>
+
+          <div style="margin-bottom:32px;">
+            <a href="../../index.html#products" class="btn btn-secondary">
+              ← Back to Products
+            </a>
+          </div>
+
+          <p class="eyebrow">Product</p>
+          <h1>SimWiz</h1>
+          <p>
+            A DCS Environment Emulator And Virtual Plant
+          </p>
+
+        </div>
+
+        <!-- RIGHT: IMAGE -->
+        <div>
+          <img src="../../assets/images/products/simwiz.png" 
+              alt="SimWiz hero image" 
+              style="width:100%; border-radius:16px;">
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 1 -->
+    <section class="section section-white">
+      <div class="container research-detail-grid">
+
+        <div class="research-detail-image">
+          <div class="research-detail-img-card">
+            <img src="../../assets/images/products/simwiz-1.jpg" alt="SimWiz platform">
+          </div>
+        </div>
+
+        <div class="research-detail-content">
+          <p class="eyebrow">Overview</p>
+          <h2>Interactive Process Simulation</h2>
+          <p>
+            SimWiz is an interactive platform containing a suite of virtual plants ranging from single units
+            and plant sections to full processing plants. Developed in Python and powered by an industry standard 
+            process simulator, SimWiz emulates a DCS environment to operate and visualize chemical plants in 
+            different scenarios, as well as easily collect and analyze data. The user interface is fully menu-based 
+            so that users are not required to have any knowledge of a specific programming language. Because of its 
+            modularity, SimWiz can be used across the entire Chemical Engineering curricula.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 2 -->
+    <section class="section section-purple">
+      <div class="container research-detail-grid reverse">
+
+        <div class="research-detail-image">
+          <div class="research-detail-img-card">
+            <img src="../../assets/images/products/simwiz-2.png" alt="SimWiz features">
+          </div>
+        </div>
+
+        <div class="research-detail-content">
+          <p class="eyebrow">Capabilities</p>
+          <h2>From Units to Full Plants</h2>
+          <!-- <p>
+            SimWiz supports simulation across multiple scales—from individual unit operations
+            to fully integrated chemical plants.
+          </p>
+          <p>
+            Its flexible architecture allows users to design, operate, and analyze
+            complex systems in a DCS-like environment.
+          </p> -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 3 -->
+    <section class="section section-white">
+      <div class="container research-detail-grid">
+
+        <div class="research-detail-image">
+          <div class="research-detail-img-card">
+            <img src="../../assets/images/products/simwiz-3.png" alt="SimWiz education">
+          </div>
+        </div>
+
+        <div class="research-detail-content">
+          <p class="eyebrow">Applications</p>
+          <h2>Using SimWiz for Teaching and Training</h2>
+          <p>
+            SimWiz allows students and engineers to:.
+          </p>
+          <!-- add bullet points about specific courses and topics where SimWiz can be used -->
+          <ul>
+            <li>Learn about system dynamics</li>
+            <li>Understand the behavior of typical unit operations</li>
+            <li>Perform mass and energy balances around different control volumes</li>
+            <li>Perform data processing and reconciliation</li>
+            <li>Design and test control systems for single units as well as integrated plants</li>
+            <li>Implement and test alternative control configurations</li>
+            <li>Perform startup and shutdown procedures</li>
+            <li>Generate realistic datasets for advanced data analytics </li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> PSE@LSU. All rights reserved.</p>
+      <p>Louisiana State University</p>
+    </div>
+  </footer>
+
+  <script src="../../assets/script.js"></script>
+
+</body>
+</html>

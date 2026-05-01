@@ -626,26 +626,24 @@ h3 {
 }
 
 .people-option-card {
-  min-height: 132px;
-  display: flex;
+  min-height: auto;
+  display: inline-flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 20px 22px;
-  border-radius: 24px;
-  background: linear-gradient(135deg, #ffffff, #f7f3ff);
-  border: 1px solid var(--line);
-  color: var(--deep-purple);
+  justify-content: center;
+  gap: 10px;
+  padding: 13px 22px;
+  border-radius: 999px;
+  background: var(--lsu-purple);
+  color: white;
   font-weight: 800;
-  box-shadow: 0 16px 48px rgba(40, 16, 79, 0.08);
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+  box-shadow: 0 16px 34px rgba(70, 29, 124, 0.24);
+  transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
 }
 
 .people-option-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 22px 58px rgba(40, 16, 79, 0.14);
-  border-color: rgba(70, 29, 124, 0.32);
-  background: linear-gradient(135deg, #ffffff, #efe6ff);
+  background: #5e2ca5;
+  transform: translateY(-2px);
+  box-shadow: 0 18px 40px rgba(70, 29, 124, 0.35);
 }
 
 .people-option-card span:first-child {
@@ -653,16 +651,15 @@ h3 {
 }
 
 .people-option-card span:last-child {
-  color: var(--lsu-purple);
-  font-size: 1.2rem;
+  color: white;
+  font-size: 1rem;
   line-height: 1;
-  opacity: 0.65;
-  transition: transform 0.2s ease, opacity 0.2s ease;
+  opacity: 1;
+  transition: transform 0.2s ease;
 }
 
 .people-option-card:hover span:last-child {
   transform: translateX(4px);
-  opacity: 1;
 }
 
 /* =========================
@@ -895,8 +892,10 @@ h3 {
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  object-position: center center;
+  /* object-fit: contain;
+  object-position: center center; */
+  object-fit: cover;
+  object-position: center;
   background: #fff;
   opacity: 0;
   transition: opacity 1s ease;
@@ -1155,7 +1154,7 @@ h3 {
 
 
 /* =========================
-   PRODUCTS CAROUSEL
+   PRODUCTS CAROUSEL (UPDATED)
 ========================= */
 
 .product-carousel {
@@ -1166,6 +1165,7 @@ h3 {
   gap: 18px;
 }
 
+/* SCROLL TRACK (unchanged behavior) */
 .product-track {
   display: flex;
   gap: 28px;
@@ -1180,54 +1180,75 @@ h3 {
   display: none;
 }
 
+/* =========================
+   PRODUCT CARD (NEW STYLE)
+========================= */
+
 .product-card {
   flex: 0 0 calc((100% - 56px) / 3);
   scroll-snap-align: start;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: 24px;
-  box-shadow: 0 16px 48px rgba(40, 16, 79, 0.08);
-  overflow: hidden;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+
+  background: transparent; /* 🔥 remove square background */
+  border: none;
+  box-shadow: none;
+
+  padding: 10px;
+  text-decoration: none;
+
+  transition: transform 0.2s ease;
 }
 
+/* Hover like resource cards */
 .product-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 24px 64px rgba(40, 16, 79, 0.16);
-  border-color: rgba(70, 29, 124, 0.28);
+  transform: translateY(-4px);
+  cursor: pointer;
 }
+
+/* =========================
+   IMAGE (RESOURCE STYLE)
+========================= */
 
 .product-card img {
   width: 100%;
-  max-width: 220px;
-  aspect-ratio: 1 / 1;
+  max-width: 200px;
+  aspect-ratio: 2 / 3;
   object-fit: contain;
-  display: block;
-  margin-top: 26px;
-  padding: 10px;
-  transition: transform 0.3s ease;
+
+  border-radius: 12px;
+  margin-bottom: 12px;
+
+  background: none; /* 🔥 removes white square */
+  padding: 0;
 }
 
-.product-card:hover img {
-  transform: scale(1.04);
-}
+/* =========================
+   TEXT
+========================= */
 
 .product-card-body {
-  padding: 18px 24px 28px;
+  padding: 0;
 }
 
-.product-card-body h3 {
-  margin-bottom: 12px;
+.product-card h3 {
+  color: var(--lsu-purple);
+  font-weight: 800;
+  margin-bottom: 6px;
 }
 
-.product-card-body p {
+.product-card p {
   color: var(--muted);
-  margin: 0 0 22px;
+  font-size: 0.95rem;
+  margin: 0;
 }
+
+/* =========================
+   ARROWS (UNCHANGED)
+========================= */
 
 .product-arrow {
   width: 46px;
@@ -1240,13 +1261,17 @@ h3 {
   line-height: 1;
   cursor: pointer;
   box-shadow: 0 14px 30px rgba(70, 29, 124, 0.24);
-  transition: transform 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+  transition: transform 0.2s ease, background 0.2s ease;
 }
 
 .product-arrow:hover {
   background: var(--deep-purple);
   transform: translateY(-2px);
 }
+
+/* =========================
+   DOTS (UNCHANGED)
+========================= */
 
 .product-dots {
   display: flex;
@@ -1269,6 +1294,10 @@ h3 {
   width: 28px;
   background: var(--lsu-purple);
 }
+
+/* =========================
+   RESPONSIVE
+========================= */
 
 @media (max-width: 900px) {
   .product-card {
@@ -1451,12 +1480,36 @@ h3 {
   order: 1;
 }
 
-.research-detail-image {
+/* .research-detail-image {
+  display: grid;
+  gap: 20px;
   overflow: hidden;
   border-radius: 28px;
   background: var(--surface);
   border: 1px solid var(--line);
   box-shadow: var(--shadow);
+  padding: 20px;
+} */
+
+.research-detail-image {
+  display: grid;
+  gap: 20px;
+}
+
+.research-detail-img-card {
+  overflow: hidden;
+  border-radius: 28px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  padding: 20px;
+}
+
+.research-detail-img-card img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
 }
 
 .research-detail-image img {
