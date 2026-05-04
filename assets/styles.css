@@ -1524,6 +1524,12 @@ h3 {
   font-size: 1.06rem;
 }
 
+.research-detail-img-card video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 @media (max-width: 840px) {
   .research-detail-grid {
     grid-template-columns: 1fr;
@@ -1533,4 +1539,26 @@ h3 {
   .research-detail-grid.reverse .research-detail-content {
     order: initial;
   }
+}
+
+.research-video-section {
+  display: flex;
+  justify-content: center;
+}
+
+.research-video-card {
+  width: 100%;
+  max-width: 1000px;
+  overflow: hidden;
+  border-radius: 28px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  padding: 20px;
+}
+
+.research-video-card video {
+  width: 100%;
+  height: auto;
+  display: block;
 }
