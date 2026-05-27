@@ -1766,3 +1766,26 @@ h3 {
   height: auto;
   display: block;
 }
+
+/* =========================
+   RESEARCH HOME VIDEO
+========================= */
+
+.research-home-video-card {
+  width: 100%;
+  max-width: 950px;
+  margin: 0 auto 42px;
+  overflow: hidden;
+  border-radius: 28px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  padding: 16px;
+}
+
+.research-home-video-card video {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
