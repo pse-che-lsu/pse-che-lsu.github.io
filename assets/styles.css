@@ -670,6 +670,20 @@ h3 {
     box-shadow 0.25s ease,
     border-color 0.25s ease;
 }
+/* for click sponsor cards*/
+.sponsor-grid a.sponsor-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+
+.sponsor-grid a.sponsor-card img {
+  pointer-events: none;
+}
 
 .sponsor-card:hover {
   transform: translateY(-4px);
